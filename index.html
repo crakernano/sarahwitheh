@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/78d82b2566.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- animate CSS-->
+    <link rel="stylesheet" href="wp-content/themes/sarah-with-e-h/assets/js/animation.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    
+  </head>
+
+  <style>
+
+    .more{
+        background-color: #2b2b2b;
+        min-width: 300px;
+        color: #FFF;
+        padding: 100px;
+    }
+    
+    .titulo {
+      position: absolute;
+      color: #FFF;
+      font-size: 5rem;
+      bottom: 350px;
+      left: 50px;
+    }
+    
+    .subtitulo {
+      position: absolute;
+      color: #FFF;
+      font-size: 4rem;
+      bottom: 275px;
+      left: 50px;
+    }
+    
+    .intro-text{
+      position: absolute;
+      color: #FFF;
+      font-size: 1rem;
+      bottom: 150px;
+      left: 50px;
+      width: 40%;
+    }
+
+    .header-buton{
+        position: absolute;      
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 20px;
+        max-width: 480px;
+        min-height: 40px;
+        min-width: 0px;
+        overflow: hidden;
+        padding: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;  
+        bottom: 25px;
+        border: 0;
+        border-radius: 100px;
+    }  
+
+    #contact_me_button{
+        left:200px;
+    }
+
+    #portfolio_button{
+        left:60px;
+        background-color: #2b2b2b;
+        color: white;
+    }
+    
+    .moreImage{
+        position: relative;
+        border-radius: 2%;
+        height: 500px ;
+        box-shadow: 10px 10px #c40001;
+    
+    }
+    
+  /*  
+    .sarahSubTitle{
+        margin-bottom:4rem;
+        color: white;
+    
+      text-shadow: -18px -18px 2px #363636;
+    }
+    */
+h2.sarahSubTitle{
+  font-size: 60pt;
+  position: relative;
+  margin: 10px;
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  z-index: 1;
+}
+
+span.sarahSubTitle{
+    position: absolute;    
+    color: #363636;
+    font-size: 90pt;
+    filter: blur(3px);    
+    top: -30px;
+    left: 38%;
+    z-index: -2;
+
+}
+    
+    .card-body{
+        background-color: #2b2b2b;
+    }
+    .card-header{
+        border-bottom: none;
+    }
+    h5.card-header{
+     
+        background-color: #2b2b2b;
+    }
+    
+    .card{
+         background-color: #2b2b2b;
+         border: none;
+    }
+    
+    .card-title{
+        text-align: center;
+        font-weight: bolder;
+        font-size: 1.7rem;
+    }
+
+    .special_number{
+        color: #c40001;
+        font-weight: bolder;
+        font-size: 2.5rem;
+    }
+
+.progress{
+    background-color: #FFF !important;
+}
+
+.progress-bar{
+    background-color: #c40001 !important;
+}
+
+.skill-row{
+    margin-top: 2.5rem;
+}
+
+.progress-label{
+    margin-bottom: 1rem;
+}
+
+/* --- Portfolio --- */
+.portfolio-filters {
+  margin-bottom: 30px;  
+  text-align: center;  
+}
+
+.portfolio-filters li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.portfolio-filters li.active {
+  opacity: 1;
+  color: #c40001;
+}
+
+.portfolio-filters li a {
+  color: #aaa;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.portfolio-grid {
+  margin-left: -7px;
+  margin-right: -7px;
+}
+
+.portfolio-grid figure {
+  width: 33.33333%;
+  float: left;
+  padding: 7px;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-grid.one-column figure {
+  width: 100%;
+}
+
+.portfolio-grid.two-columns figure {
+  width: 50%;
+}
+
+.portfolio-grid.three-columns figure {
+  width: 33.33333%;
+}
+
+.portfolio-grid.four-columns figure {
+  width: 25%;
+}
+
+.portfolio-grid.five-columns figure {
+  width: 20%;
+}
+
+.portfolio-grid img {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.portfolio-grid figure a,
+.portfolio-rid figure img {
+  display: block;
+  position: relative;
+}
+
+.portfolio-grid figure img {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-grid figure:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-grid figure a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.portfolio-item-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5%;
+  visibility: hidden;
+  filter: grayscale(100%);
+}
+
+.portfolio-grid figure .portfolio-item-img:after {
+  content: '';
+  
+  position: absolute;
+  background-color: rgba(0,0,0,.05);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-grid figure:hover .portfolio-item-img:after {
+  opacity: 1;
+}
+
+.portfolio-item-img:hover{
+filter: none;
+}
+
+.portfolio-item-desc {
+  margin-top: 12px;
+}
+
+.portfolio-item-desc h4 {
+  margin-bottom: 0;
+}
+
+.portfolio-item-desc small {
+  color: #888;
+}
+
+.portfolio-grid figure i {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 16px;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #222;
+  color: #04b4e0;
+  text-align: center;
+  line-height: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-grid figure .name {
+  display: block;
+  padding: 15px 0;
+  font-size: 16px;
+  position: relative;
+}
+
+.portfolio-grid figure .category {
+  display: inline-block;
+  padding: 2px 7px;
+  background-color: #222;
+  color: #f5f5f5;
+  font-size: 11px;
+  line-height: 1.2em;
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-grid figure:hover i,
+.portfolio-grid figure:hover .name,
+.portfolio-grid figure:hover .category {
+  opacity: 1;
+}
+
+.item-standar{
+    border-radius: 20px;
+}
+
+portfolio-image{
+  filter: grayscale(75%);
+}
+
+footer{
+    background-color: #c40001;
+    width: 100%;
+    min-height: 200px;
+    padding: 5%;
+}
+
+.send-button{
+    margin-left: 2rem;
+    
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 20px;
+        max-width: 480px;
+        min-height: 40px;
+        min-width: 0px;
+        overflow: hidden;
+        padding: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;  
+        bottom: 25px;
+        border: 0;
+        border-radius: 100px;
+}
+
+.social{
+    margin-left: 1rem;
+}
+
+.uno    {width: 85%;}
+.dos    {width: 85%;}
+.tres   {width: 85%;}
+.cuatro {width: 85%;}
+.cinco  {width: 85%;}
+.seis   {width: 85%;}
+.siete  {width: 85%;}
+.ocho   {width: 85%;}
+
+.skill {
+            display: block;
+            height: 100%;
+            background-color: #c40001;
+            border-radius: 5px;
+            animation: progress 1500ms ease-in 1;
+        }
+        /* Animating the progress bar by
+        initially starting from 0*/
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+        }
+
+/* --- End of Portfolio --- */
+    </style>
+<script> 
+  var features = ['left=10',
+                'top=10',
+                'location=no',
+                'menubar=no',
+                'directories=no',
+                'resizable=no',
+                'scrollbars=no',
+                'status=no',
+                'titlebar=no',
+                'toolbar=no',
+                'width= 600',
+                'height=600'];
+
+  function ventanaSecundaria (URL){ 
+     window.open(URL,"ventana1",features.join(',')); 
+  } 
+  </script>
+
+<body>
+
+    <div id="wrapper">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between" id="header">
+          <img src="wp-content/themes/sarah-with-e-h/assets/img/cabecera.png" alt="Snow" style="width:100%;">
+          <div class="titulo">Lorem Ipsum</div>
+          <div class="subtitulo">Lorem Ipsum sit amet</div>
+          <div class="intro-text">Lorem ipsum dolor sit amet. Qui labore similique eum ipsam sed sunt galisum ea
+            recusandae quasi ut recusandae cupiditate aut rerum nostrum qui iste eveniet.
+            Qui natus odio eum alias enim ab voluptatem quaerat ut voluptatem quam.</div>  
+            <button type="button" class="header-buton" id="portfolio_button" onclick="location.href='#porfolio'">Portfolio</button>
+            <button type="button" class="header-buton" id="contact_me_button"onclick="location.href='#contact_me'" >Contact me</button>
+        
+        </header>
+        <div class="more">
+        <div class="row align-items-start">
+            <div class="col">
+            <img src="wp-content/themes/sarah-with-e-h/assets/img/paceholder.png" class="moreImage">
+        
+            </div>
+            <div class="col">
+            <h2>A bit more about me</h3>
+            <p>Lorem ipsum dolor sit amet. Et molestias nesciunt eos rerum dolorum 33 reiciendis
+        
+            iure sed laudantium porro ex cumque totam non sequi blanditiis. Sed aperiam quas
+        
+            reiciendis ipsam At rerum facilis qui necessitatibus enim ea recusandae ratione.
+        
+            Eum mollitia placeat est quae earum ea laboriosam placeat sit alias debitis ut
+        
+            reiciendis consequatur sit nisi odit. Eos odit optio in adipisci quidem quis sequi.
+        
+            Sed assumenda aperiam. </p>
+        
+        
+            <p>Ut nihil odit in deleniti facere aut quia adipisci At consequatur veritatis ut ducimus
+                nisi sit quia dolorem et error sint. Qui odit deserunt quo unde dolorum et alias
+                nostrum ut sunt cupiditate. Et nihil laboriosam ut eveniet voluptas et doloremque
+                delectus eos enim iure qui inventore omnis et blanditiis consequuntur.
+            </p>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <span class="special_number fadeIn">7</span> Years of experience
+                </div>
+                <div class="col-sm-6">
+                    <span class="special_number fadeIn">1800</span> Successful projects completed
+                </div>
+            </div>
+
+
+            </div>
+        </div> 
+        
+        <div class="flex-wrap align-items-center" style="margin-top:4rem;">
+            
+            
+            <!-- Estos titulos se tienen que poder simplificar -->
+            <h2 class ="sarahSubTitle">Services<span class ="sarahSubTitle">Services</span></h2>
+            <div class="row">
+                <div class="col-sm-4">
+        
+                    <div class="card slideUp">
+                        <h5 class="card-header text-center text-white"><img src="wp-content/themes/sarah-with-e-h/assets/img/lightbulb-solid.svg" width="30px"></h5>
+                        <div class="card-body">
+                            <h5 class="card-title">Graphic Design</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+        
+                    <div class="card slideUp">
+                        <h5 class="card-header text-center text-white"><img src="wp-content/themes/sarah-with-e-h/assets/img/lightbulb-solid.svg" width="30px"></h5>
+                        <div class="card-body">
+                            <h5 class="card-title">Branding</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+        
+                    <div class="card slideUp">
+                        <h5 class="card-header text-center text-white"><img src="wp-content/themes/sarah-with-e-h/assets/img/lightbulb-solid.svg" width="30px"></h5>
+                        <div class="card-body">
+                            <h5 class="card-title">UI/Web Design</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DE LA PRIMERA FILA-->
+            <div class="row" style="margin-top: 5rem;">
+                <div class="col-sm-4">
+        
+                    <div class="card slideUp">
+                        <h5 class="card-header text-center text-white"><img src="wp-content/themes/sarah-with-e-h/assets/img/lightbulb-solid.svg" width="30px"></h5>
+                        <div class="card-body">
+                            <h5 class="card-title">Motion Graphic</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+        
+                    <div class="card slideUp">
+                        <h5 class="card-header text-center text-white"><img src="wp-content/themes/sarah-with-e-h/assets/img/lightbulb-solid.svg" width="30px"></h5>
+                        <div class="card-body">
+                            <h5 class="card-title">Video editing</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+        
+                    <div class="card slideUp">
+                        <h5 class="card-header text-center text-white"><img src="wp-content/themes/sarah-with-e-h/assets/img/lightbulb-solid.svg" width="30px"></h5>
+                        <div class="card-body">
+                            <h5 class="card-title">Graphic Design</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN SEGUNDA FILA-->
+
+            <h2 class ="sarahSubTitle">Skills<span class ="sarahSubTitle">Skills</span></h2>
+            <div class="container">
+                <div class="row skill-row">
+                  <div class="col">
+                    <div class="row progress-label">
+                        <div class="col-10"><span class="progress-label">Skill 1</span></div>
+                        <div class="col-2" style="text-align: end;"><span class="text-end">90%</span></div>
+                    </div> 
+                        <div class="progress">                            
+                            <!--<div class="progress-bar" style="width: 90%" role="progressbar" aria-label="Basic example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
+                            <span class="skill uno"></span>
+                        </div>                      
+                  </div>
+                  <div class="col">
+                    <div class="row progress-label">
+                        <div class="col-10"><span class="progress-label">Skill 2</span></div>
+                        <div class="col-2" style="text-align: end;"><span class="text-end">60%</span></div>
+                    </div> 
+                    <div class="progress">                            
+                        <!--<div class="progress-bar" role="progressbar" style="width: 60%" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
+                        <span class="skill dos"></span>
+                    </div>
+                  </div> 
+                  
+                                  
+                </div>
+                <!-- Fin de la primera fila--> 
+                <div class="row skill-row">
+                    <div class="col">
+                        <div class="row progress-label">
+                            <div class="col-10"><span class="progress-label">Skill 3</span></div>
+                            <div class="col-2" style="text-align: end;"><span class="text-end">40%</span></div>
+                        </div> 
+                          <div class="progress">                            
+                              <!--<div id="skill3" class="progress-bar" style="width: 40%" role="progressbar" aria-label="Basic example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
+                              <span class="skill tres"></span>
+                            </div>                      
+                    </div>
+                   <div class="col">
+                    
+                    <div class="row progress-label">
+                        <div class="col-10"><span class="progress-label">Skill 4</span></div>
+                        <div class="col-2" style="text-align: end;"><span class="text-end">60%</span></div>
+                    </div>
+                    
+                     
+                      <div class="progress">                            
+                          <!--<div class="progress-bar" role="progressbar"style="width: 60%"  aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
+                          <span class="skill cuatro"></span>
+                      </div>
+                    
+                        
+                    </div> 
+                </div>              
+                <!--Fin de la segunda fila-->
+
+                <div class="row skill-row">
+                    <div class="col">
+                        <div class="row progress-label">
+                            <div class="col-10"><span class="progress-label">Skill 5</span></div>
+                            <div class="col-2" style="text-align: end;"><span class="text-end">60%</span></div>
+                        </div> 
+                          <div class="progress">                            
+                              <!--<div class="progress-bar" style="width: 60%" role="progressbar" aria-label="Basic example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
+                              <span class="skill cinco"></span>
+                          </div>                      
+                    </div>
+                   <div class="col">
+                    <div class="row progress-label">
+                        <div class="col-10"><span class="progress-label">Skill 6</span></div>
+                        <div class="col-2" style="text-align: end;"><span class="text-end">60%</span></div>
+                    </div> 
+                      <div class="progress">                            
+                          <!--<div class="progress-bar" role="progressbar" style="width: 60%"  aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
+                          <span class="skill seis"></span>
+                      </div>
+                    </div> 
+                </div>              
+
+                <!-- Fin de la tercear fila-->
+
+                <div class="row skill-row">
+                    <div class="col">
+                        <div class="row progress-label">
+                            <div class="col-10"><span class="progress-label">Skill 7</span></div>
+                            <div class="col-2" style="text-align: end;"><span class="text-end">60%</span></div>
+                        </div>                          
+                          <div class="progress">                            
+                              <!--<div class="progress-bar" style="width: 60%" role="progressbar" aria-label="Basic example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
+                              <span class="skill siete"></span>
+                          </div>                      
+                    </div>
+                   <div class="col">
+                    <div class="row progress-label">
+                        <div class="col-10"><span class="progress-label">Skill 8</span></div>
+                        <div class="col-2" style="text-align: end;"><span class="text-end">100%</span></div>
+                    </div> 
+                      <div class="progress">                            
+                          <!--<div class="progress-bar" role="progressbar" style="width: 100%" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
+                          <span class="skill ocho"></span>
+                      </div>
+                    </div> 
+                </div>              
+
+                <!--Fin de la cuarta fila-->
+
+                <h2 class ="sarahSubTitle">My Work<span class ="sarahSubTitle">My Work</span></h2>
+
+                <div class="row" id="porfolio">
+                    <div class="col-xs-12 col-sm-12">
+                        <ul class="portfolio-filters">
+                            <li class="active"><a class="filter btn btn-sm btn-link" data-group="category_all">All</a></li>
+                            <li><a class="filter btn btn-sm btn-link" data-group="category_flutter">Graphic Design</a></li>
+                            <li><a class="filter btn btn-sm btn-link" data-group="category_flutter">Branding</a></li>
+                            <li><a class="filter btn btn-sm btn-link" data-group="category_flutter">UI/Web design</a></li>
+                            <li><a class="filter btn btn-sm btn-link" data-group="category_flutter">Music</a></li>
+                        </ul>
+                        <div class="portfolio-grid three-columns">
+              
+                            <figure class="item standard" data-groups='["category_all", "category_php", "category_maker", "category_emprendimiento", "category_divulgacion"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="wp-content/themes/sarah-with-e-h/assets/img/placeholder-color.jpg" alt="Item 1" title="" class="portfolio-image"/>
+                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+  
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="wp-content/themes/sarah-with-e-h/assets/img/placeholder-color.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                                <div class="portfolio-item-img slideUp">
+                                  <img src="wp-content/themes/sarah-with-e-h/assets/img/placeholder-color.jpg" alt="Item 1" title=""/>
+                                  <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
+                                </div>
+                              </figure>
+                        </div>
+
+                        <div class="portfolio-grid three-columns">
+              
+                            <figure class="item standard" data-groups='["category_all", "category_php", "category_maker", "category_emprendimiento", "category_divulgacion"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="wp-content/themes/sarah-with-e-h/assets/img/placeholder-color.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+  
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="wp-content/themes/sarah-with-e-h/assets/img/placeholder-color.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                                <div class="portfolio-item-img slideUp">
+                                  <img src="wp-content/themes/sarah-with-e-h/assets/img/placeholder-color.jpg" alt="Item 1" title=""/>
+                                  <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
+                                </div>
+                              </figure>
+                        </div>
+
+                        <div class="portfolio-grid three-columns">
+              
+                            <figure class="item standard" data-groups='["category_all", "category_php", "category_maker", "category_emprendimiento", "category_divulgacion"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="wp-content/themes/sarah-with-e-h/assets/img/placeholder-color.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+  
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="wp-content/themes/sarah-with-e-h/assets/img/placeholder-color.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                                <div class="portfolio-item-img slideUp">
+                                  <img src="wp-content/themes/sarah-with-e-h/assets/img/placeholder-color.jpg" alt="Item 1" title=""/>
+                                  <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
+                                </div>
+                              </figure>
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="container">
+            <div class="row align-items-center" id="contact_me">
+              <div class="col-8">
+                <div class="input-group mb-3">
+                    <input type="text" placeholder="email">
+                    <button type="button" class="send-button">Contact me</button>
+                </div>
+              </div>
+              <div class="col-4">
+                <button type="button" class="btn btn-facebook btn-icon-only rounded-circle" style="background-color: #FFF;">
+                    <span class="btn-inner--icon" style="font-size: 1.5rem;"><i class="fab fa-pinterest"></i></span>
+                </button>
+                <button type="button" class="btn btn-linkedin btn-icon-only rounded-circle" style="background-color: #FFF; margin-left: 2rem;">
+                    <span class="btn-inner--icon" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></span>
+                </button>
+                <button type="button" class="btn btn-linkedin btn-icon-only rounded-circle" style="background-color: #FFF; margin-left: 2rem;">
+                    <span class="btn-inner--icon" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></span>
+                </button>
+              </div>              
+            </div>
+        </div>          
+    </footer>
+      
+    <!-- Optional JavaScript -->
+
+    <script>
+
+    function animateprogress (id, val){    
+    
+    
+      var getRequestAnimationFrame = function () {  /* <------- Declaro getRequestAnimationFrame intentando obtener la máxima compatibilidad con todos los navegadores */
+          return window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||  
+          window.mozRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          window.msRequestAnimationFrame ||
+          function ( callback ){
+              window.setTimeout(enroute, 1 / 60 * 1000);
+          };
+            
+      };
+        
+      var fpAnimationFrame = getRequestAnimationFrame();   /* <--- Declaro una instancia de getRequestAnimationFrame para llamar a la función animación */
+      var i = 0;
+      var animacion = function () {
+                
+      if (i<=val)
+          {
+              document.querySelector(id).setAttribute("value",i);      /* <----  Incremento el valor de la barra de progreso */
+              document.querySelector(id+"+ span").innerHTML = i+"%";     /* <---- Incremento el porcentaje y lo muestro en la etiqueta span */
+              i++;
+              fpAnimationFrame(animacion);          /* <------------------ Mientras que el contador no llega al porcentaje fijado la función vuelve a llamarse con fpAnimationFrame     */
+          }
+                                            
+      }
+
+          fpAnimationFrame(animacion);   /*  <---- Llamo la función animación por primera vez usando fpAnimationFrame para que se ejecute a 60fps  */
+                  
+    }
+    </script>
+
+<script type="text/javascript"> 
+
+	window.onload = function() { 
+		
+		animateprogress("#skill3",91);
+		animateprogress("#php",72);
+		//animateprogress("#css",86);
+		//animateprogress("#python",52);
+		//animateprogress("#javascript",79);
+		//animateprogress("#nodejs",36);
+		
+	} 	
+	
+
+
+</script>
+    <script>
+        /*var speed = 100;*/
+
+        /* Call this function with a string containing the ID name to
+        * the element containing the number you want to do a count animation on.*/
+        function incEltNbr(id, speed) {
+        elt = document.getElementById(id);
+        endNbr = Number(document.getElementById(id).innerHTML);
+        incNbrRec(0, endNbr, elt, speed);
+        }
+
+        /*A recursive function to increase the number.*/
+        function incNbrRec(i, endNbr, elt, speed) {
+        if (i <= endNbr) {
+            elt.innerHTML = i;
+            setTimeout(function() {//Delay a bit before calling the function again.
+            incNbrRec(i + 1, endNbr, elt);
+            }, speed);
+        }
+        }
+
+        /*Function called on button click*/
+        function incNbr(){
+        incEltNbr("nbr");
+        }
+
+        incEltNbr("years_experience", 50);
+        incEltNbr("proyect_successful", 500);
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <script>
+      $(window).scroll(function() {
+        $('#animatedElement').each(function(){
+        var imagePos = $(this).offset().top;
+    
+        var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+400) {
+            $(this).addClass("slideUp");
+          }
+        });
+      });
+    </script>
+  
+  </body>
+</html>
