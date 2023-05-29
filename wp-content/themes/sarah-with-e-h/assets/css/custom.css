@@ -99,9 +99,32 @@
     .moreImage{
         position: relative;
         border-radius: 2%;
-        height: 500px ;
-        box-shadow: 10px 10px #c40001;
-    
+        height: 500px ;  
+    }
+
+    .moreImage:before{
+        z-index: 1;
+        position: absolute;
+        content: "";
+        display: block;
+        width: 500px;
+        height: 500px;
+        top: 30px;
+        left: 60px;
+        border-radius: 2%;
+        background-color: #c40001;
+        -webkit-transform:  rotate(3deg);
+        -moz-transform:     rotate(3deg);
+        -o-transform:       rotate(3deg);
+        -ms-transform:      rotate(3deg);
+        transform:          rotate(3deg);
+    }
+
+    .moreImage img{
+      z-index: 2;
+        border-radius: 2%;
+        height: 500px;
+        position: absolute;
     }
     
   /*  
@@ -455,11 +478,17 @@ footer{
   }
 
   .moreImage{
-    display: none;
+
+    position:relative;
   }
+
+ 
+
   #more-image{
     display: none;
   }
+
+
 
   .titulo{
     top: 10%;
