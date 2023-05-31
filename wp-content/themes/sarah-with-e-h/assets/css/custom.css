@@ -1,5 +1,18 @@
-body{
+html{
+  width: 100vw;
   overflow-x: hidden;
+}
+
+body{
+  overflow-x: hidden !important;
+}
+
+#wrapper{
+  background-color: #c40001;
+}
+
+#header{
+  background-color: #2b2b2b;
 }
 
 .more{
