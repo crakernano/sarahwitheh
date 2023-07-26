@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/flickity.pkgd.min.js"></script>
+    <!-- sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/sweetalert2@9.5.3/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
   </head>
 
   <style></style>
@@ -36,6 +40,34 @@
   function ventanaSecundaria (URL){ 
      window.open(URL,"ventana1",features.join(',')); 
   } 
+
+  async function contactMe(){
+      const { value: formValues } = await Swal.fire({
+      title: 'Contact Me',
+      html:
+        '<label> E-mail: </label>' +
+        '<input id="swal-input1" class="swal2-input">' +
+        '<label> Message: </label>' +
+        '<textarea id="swal-input2" class="swal2-textarea">',
+      focusConfirm: false,
+      preConfirm: () => {
+        return [
+          document.getElementById('swal-input1').value,
+          document.getElementById('swal-input2').value
+        ]
+      }
+    })
+
+    if (formValues) {
+      // Swal.fire(JSON.stringify(formValues))
+      Swal.fire({
+        icon: 'success',
+        title: 'success',
+        text: 'Send',
+        footer: '<a href="http://linkedin.com/in/sarah-schaefl%C3%A9-062235184/" target="_blank"><span class="btn-inner--icon" style="font-size: 1.5rem;"><i class="fab fa-linkedin"style="color: black;"></i></span></a>'
+      })  
+     }
+  }
   </script>
 
 
@@ -51,7 +83,7 @@
             recusandae quasi ut recusandae cupiditate aut rerum nostrum qui iste eveniet.
             Qui natus odio eum alias enim ab voluptatem quaerat ut voluptatem quam.</div>  
             <button type="button" class="header-buton" id="portfolio_button" onclick="location.href='#porfolio'">Portfolio</button>
-            <button type="button" class="header-buton" id="contact_me_button"onclick="location.href='#contact_me'" >Contact me</button>
+            <button type="button" class="header-buton" id="contact_me_button"onclick="contactMe()" >Contact me</button>
         
         </header>
         <div class="more" >
