@@ -43,24 +43,12 @@
 
   function loadMore(){
     var morePorfolio = document.getElementById("see-more-one");
+    var moreButton = document.getElementById("more");
     morePorfolio.style.display = "inline";
+    moreButton.style.display = "none";
   }
 
   function selectedBehance(){
-  //   Swal.fire({
-  //   title: '¿Qué Behance desea visitar?',
-  //   showDenyButton: true,
-  //   showCancelButton: true,
-  //   confirmButtonText: 'UI / UX',
-  //   denyButtonText: `Art Director`,
-  // }).then((result) => {
-  //   /* Read more about isConfirmed, isDenied below */
-  //   if (result.isConfirmed) {
-  //     window.open("https://www.behance.net/sarahschaefl2", "_blank");
-  //   } else if (result.isDenied) {
-  //     window.open("https://www.behance.net/sarahwitheh", "_blank");
-  //   }
-  // })
   Swal.fire({
     title: '¿Qué Behance desea visitar?',    
     icon: 'question',
