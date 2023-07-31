@@ -48,6 +48,19 @@
     moreButton.style.display = "none";
   }
 
+  function fliterCategory(branding){
+    filters = ["filter-all","filter-design","filter-branding","filter-ux","filter-music"];
+    
+    filters.map(function(x) {
+      var titleSelected = document.getElementById(x);  
+      titleSelected.classList.remove('active');
+    });
+
+    idSelected = `filter-${branding}`
+    var titleSelected = document.getElementById(idSelected);
+    titleSelected.classList.add('active');
+  }
+
   function selectedBehance(){
   Swal.fire({
     title: '¿Qué Behance desea visitar?',    
@@ -344,11 +357,21 @@
                 <div class="row" id="porfolio" data-aos="fade-up">
                     <div class="col-xs-12 col-sm-12">
                         <ul class="portfolio-filters">
-                            <li class="active"><a class="filter btn btn-sm btn-link" data-group="category_all">All</a></li>
-                            <li><a class="filter btn btn-sm btn-link" data-group="category_flutter">Graphic Design</a></li>
-                            <li><a class="filter btn btn-sm btn-link" data-group="category_flutter">Branding</a></li>
-                            <li><a class="filter btn btn-sm btn-link" data-group="category_flutter">UI/Web design</a></li>
-                            <li><a class="filter btn btn-sm btn-link" data-group="category_flutter">Music</a></li>
+                            <li id="filter-all" class="active"><a  class="filter btn btn-sm btn-link" 
+                                                                      data-group="category_all"
+                                                                      onclick="fliterCategory('all')">All</a></li>
+                            <li id="filter-design"><a class="filter btn btn-sm btn-link" 
+                                                      data-group="category_flutter"
+                                                      onclick="fliterCategory('design')">Graphic Design</a></li>
+                            <li id="filter-branding"><a class="filter btn btn-sm btn-link" 
+                                                        data-group="category_flutter" 
+                                                        onclick="fliterCategory('branding')">Branding</a></li>
+                            <li id="filter-ux"><a class="filter btn btn-sm btn-link" 
+                                                  data-group="category_flutter"
+                                                  onclick="fliterCategory('ux')">UI/Web design</a></li>
+                            <li id="filter-music"><a  class="filter btn btn-sm btn-link" 
+                                                      data-group="category_flutter"
+                                                      onclick="fliterCategory('music')">Music</a></li>
                         </ul>
                         <div class="portfolio-grid three-columns">
               
@@ -480,6 +503,20 @@
                             <figure class="item standard" data-groups='["category_all", "category_php", "category_maker", "category_emprendimiento", "category_divulgacion"]'>
                               <div class="portfolio-item-img slideUp">
                                 <img src="assets/img/porfolio-Happy-Earth/happy_eart.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio-happy-eart.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+
+                            <figure class="item standard" data-groups='["category_all", "category_php", "category_maker", "category_emprendimiento", "category_divulgacion"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="assets/img/portfolio-people/people_01.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio-people.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+
+                            <figure class="item standard" data-groups='["category_all", "category_php", "category_maker", "category_emprendimiento", "category_divulgacion"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="assets/img/portfolio-coronavirus/coronavirus.jpg" alt="Item 1" title=""/>
                                 <a href="javascript:ventanaSecundaria('portfolio-happy-eart.html')" class="ajax-page-load"></a>
                               </div>
                             </figure>
