@@ -41,6 +41,11 @@
      window.open(URL,"ventana1",features.join(',')); 
   } 
 
+  function loadMore(){
+    var morePorfolio = document.getElementById("see-more-one");
+    morePorfolio.style.display = "inline";
+  }
+
   async function contactMe(){
       const { value: formValues } = await Swal.fire({
       title: 'Contact Me',
@@ -387,12 +392,86 @@
                               </div>
                             </figure>
 
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="assets/img/portfolio-salsa-bachata/salsa_bachata.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
 
                         </div>
                         
                     </div>
+
+                    <!-- A partir de aquí, solo al pulsar en MORE-->
+                    <div class="col-xs-12 col-sm-12" id="see-more-one">
+                        <div class="portfolio-grid three-columns">
+              
+                            <figure class="item standard" data-groups='["category_all", "category_php", "category_maker", "category_emprendimiento", "category_divulgacion"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="assets/img/porfolio-nh/NH.jpg" alt="Item 1" title="" class="portfolio-image"/>
+                                <a href="javascript:ventanaSecundaria('portfolio-nh.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+  
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="assets/img/portfolio-Calendar-Infographic/calendar_infographic.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio-calendar-infographic.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                                <div class="portfolio-item-img slideUp">
+                                  <img src="assets/img/porfolio-acordes/acordes.jpg" alt="Item 1" title=""/>
+                                  <a href="javascript:ventanaSecundaria('porfolio/portfolio-acordes.html')" class="ajax-page-load"></a>
+                                </div>
+                              </figure>
+                        </div>
+
+                        <div class="portfolio-grid three-columns">
+              
+                            <figure class="item standard" data-groups='["category_all", "category_php", "category_maker", "category_emprendimiento", "category_divulgacion"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="assets/img/porfolio-ugartebeer/ugartebeer.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio-ugartebeer.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+  
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="assets/img/portfolio-Case-UX/padelIMBA.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio-case-ux.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+
+                            <figure class="item standard" data-groups='["category_all", "category_detailed", "category_php", "category_emprendimiento"]'>
+                                <div class="portfolio-item-img slideUp">
+                                  <img src="assets/img/porfolio-zamparte/zamparte.jpg" alt="Item 1" title=""/>
+                                  <a href="javascript:ventanaSecundaria('portfolio-zamparte.html')" class="ajax-page-load"></a>
+                                </div>
+                              </figure>
+                        </div>
+
+                        <div class="portfolio-grid three-columns">
+              
+                            <figure class="item standard" data-groups='["category_all", "category_php", "category_maker", "category_emprendimiento", "category_divulgacion"]'>
+                              <div class="portfolio-item-img slideUp">
+                                <img src="assets/img/porfolio-Happy-Earth/happy_eart.jpg" alt="Item 1" title=""/>
+                                <a href="javascript:ventanaSecundaria('portfolio-happy-eart.html')" class="ajax-page-load"></a>
+                              </div>
+                            </figure>
+                        </div>
+                        
+                    </div>
+                    <!-- -->
                     <div style="text-align:center;margin-left: auto;margin-right: auto;padding: 3rem;">
-                      <button type="button" class="show-more" id="more" ><span class="button__text">Load More</span></button>            
+                      <button type="button"
+                              class="show-more" 
+                              onclick="loadMore()"
+                              id="more" >
+                              <span class="button__text">Load More</span>
+                      </button>            
                     </div>                   
                 </div>
 
