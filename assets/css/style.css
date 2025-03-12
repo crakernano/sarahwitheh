@@ -1,0 +1,107 @@
+
+@font-face {
+    font-family: "Inter";
+    src: url('../fonts/inter.ttf');
+}
+
+nav{
+    margin-top: 40px;
+    border-bottom:#C30001 1px solid;
+    padding-bottom: 4rem !important;
+    margin-bottom: 6rem;
+    height: 74px;
+}
+
+.navbar-brand{
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 4%;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.nav-link{
+    font-family: "Inter";
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #C30001 !important;
+}
+
+.custom-button{
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #C30001;
+    border-radius: 100px;
+    border: 1px #C30001 solid;
+    padding: 15px 40px 15px 40px;
+    gap: 10px;
+    background-color: #FFF;
+}
+
+.button-red{
+    background-color: #C30001;   
+    color: #FFF;
+    margin-right: 25px;
+}
+
+.navbar-nav{
+    margin-left: 25%;
+}
+
+.call-action-section{
+    margin-left: auto;
+}
+
+.custom-subtitle{
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 62px;
+    letter-spacing: 28%;
+    text-transform: uppercase;
+    color: #2B2B2B;
+
+}
+
+.custom-title{
+    font-family: 'Inter';
+    color: #C30001;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 102px;
+    letter-spacing: -2%;
+}
+
+.art-director-section{
+    background-image: url('../img/sarah_section_1.png');
+    background-repeat: no-repeat;
+    background-position-x:right;
+    background-position-y:top;
+    background-size:contain;
+    height: 658px;
+    width: 1400.76px;
+    margin-left: 310px;
+}
+
+#WIA-display{
+    height: 205px;
+}
+
+.custom-text-block{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    width: 83%;
+}
