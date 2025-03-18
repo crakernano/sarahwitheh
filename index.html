@@ -17,15 +17,15 @@
 
     <script> 
     
-      let exp = calcularExperiencia('2017-02-28');
+      //let exp = calcularExperiencia('2017-02-28');
       
       window.onload = function() {
-        typeWriter(); 
-        number_counter(exp, 'experience-counter'); 
-        number_counter(85, 'brand-counter', 100);
+        //typeWriter(); 
+        //number_counter(exp, 'experience-counter'); 
+        //number_counter(85, 'brand-counter', 100);
         
-        const num_progress_bar = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
-        num_progress_bar.forEach(numero => progressAnimate(110,numero,50));
+        //const num_progress_bar = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
+        //num_progress_bar.forEach(numero => progressAnimate(110,numero,50));
 
 
       };
@@ -41,18 +41,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" aria-current="page" href="#">Proyectos</a>
-            <a class="nav-link" href="#">Habilidades</a>
-            <a class="nav-link" href="#">Sobre mi</a>
+            <a class="nav-link" aria-current="page" href="#projects-container">Proyectos</a>
+            <a class="nav-link" href="#competence-section">Habilidades</a>
+            <a class="nav-link" href="#skills-section">Sobre mi</a>
           </div>
           <div class="call-action-section">
-            <button class="custom-button">¿HABLAMOS?  🡥</button>
+            <button class="custom-button button-white">¿HABLAMOS?  🡥</button>
           </div>
         </div>
       </div>
     </nav>
     </div><!-- FIN DEL CONTAINER -->
-      <section class="art-director-section" data-aos="fade-up">
+      <section class="art-director-section" id="art-director-section" data-aos="fade-up">
         <div class="col-6">
           <h2 class="custom-subtitle">CADA TRAZO Y DETALLE IMPORTA</h2>
           <h1 class="custom-title" id="WIA-display">Soy directora de arte.</h1>
@@ -65,14 +65,14 @@
             competitivo.
           </p>
             <button class="custom-button button-red">Porfolio</button>
-            <button class="custom-button">¿HABLAMOS?  🡥</button>
+            <button class="custom-button button-white">¿HABLAMOS?  🡥</button>
           </div>
       </section> <!-- FIN DE SECCIÓN SOY DIRECTORA DE ARTE-->
 
 
     <div style="height: 100px;"></div>
 
-    <section class="impact-section" data-aos="fade-up">
+    <section class="impact-section" id="impact-section" data-aos="fade-up">
       <div class="col-6" style="float: right; margin-top: 5%;">
         <h2 class="custom-header-2">Más que diseño, impacto </h2>
         <p>Siempre he pensado que detrás de cada marca o proyecto hay algo más: sueños,
@@ -368,7 +368,7 @@
 
 
   </div><!-- Fin de la sección de habilidades -->
-  <div class="container projects" data-aos="fade-up">
+  <div class="container projects" id="projects-container" data-aos="fade-up">
     <div style="height: 100px;"></div>
     <h2 class="custom-header-3">Proyectos</h2>      
     <div class="header-shadow"><span>Proyectos</span></div>
@@ -376,22 +376,22 @@
     <div class="filtros">
       <ul class="portfolio-filters">
         <li>
-          <a  class="filter btn btn-sm btn-link" 
+          <a  class="custom-button" 
               data-group="category_all"
               id="filter-all"
               onclick="fliterCategory(event)">Todo</a></li>
         <li>
-          <a  class="filter btn btn-sm btn-link" 
+          <a  class="custom-button" 
               data-group="category_design"
               id="filter-design"
               onclick="fliterCategory(event)">Diseño Gráfico</a></li>
         <li>
-          <a class="filter btn btn-sm btn-link" 
+          <a class="custom-button" 
               data-group="category_branding" 
               id="filter-branding"
               onclick="fliterCategory(event)">Branding</a></li>
         <li>
-          <a class="filter btn btn-sm btn-link" 
+          <a class="custom-button"  
              data-group="category_ux"
              id="filter-ux"
              onclick="fliterCategory(event)">UI/Web design</a></li>
@@ -405,7 +405,7 @@
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">American Express</h5>
-          <a class="more-btn">Saber más</a>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
           <img src="assets/img/portfoloio-american-expres/01_miniatura_trabajo 1.png" class="card-img-top" alt="American Express">
         </div>
       </div>
@@ -414,7 +414,7 @@
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Immune</h5>
-          <a class="more-btn">Saber más</a>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
           <img src="assets/img/portfolio-immune/01_miniatura_trabajo 2.png" class="card-img-top" alt="...">
         </div>
       </div>
@@ -424,7 +424,7 @@
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">IE Business School</h5>
-          <a class="more-btn">Saber más</a>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
           <img src="assets/img/portfolio-ieb/01_miniatura_trabajo 3.png" class="card-img-top" alt="...">
         </div>
       </div>
@@ -434,7 +434,7 @@
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Padelmba</h5>
-          <a class="more-btn">Saber más</a>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
           <img src="assets/img/portfolio-padelmba/01_miniatura_trabajo 4.png" class="card-img-top" alt="...">
         </div>
       </div>
@@ -443,7 +443,7 @@
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Pictet</h5>
-          <a class="more-btn">Saber más</a>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
           <img src="assets/img/portfolio-pictet/01_miniatura_trabajo 6.png" class="card-img-top" alt="...">
         </div>
       </div>
@@ -453,7 +453,7 @@
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Motoluxe</h5>
-          <a class="more-btn">Saber más</a>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
           <img src="assets/img/portfolio-motoluxe/01_miniatura_trabajo 5.png" class="card-img-top" alt="...">
         </div>
       </div>
@@ -463,7 +463,7 @@
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Sony Pictures</h5>
-          <a class="more-btn">Saber más</a>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
           <img src="assets/img/portfolio-sony/01_miniatura_trabajo 7.png" class="card-img-top" alt="...">
         </div>
       </div>
@@ -472,7 +472,7 @@
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Ducati</h5>
-          <a class="more-btn">Saber más</a>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
           <img src="assets/img/portfolio-ducati/01_miniatura_trabajo 9.png" class="card-img-top" alt="...">
         </div>
       </div>
@@ -482,7 +482,7 @@
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">MM Academy</h5>
-          <a class="more-btn">Saber más</a>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
           <img src="assets/img/portfolio-mmacademy/01_miniatura_trabajo 8.png" class="card-img-top" alt="...">
         </div>
       </div>
@@ -508,12 +508,12 @@
     </div>
     <div class="col-sm-3"></div>
     <div class="col-sm-3">
-      <a href="">PROYECTOS</a>
-      <a href="">HABILIDADES</a>
+      <a href="#projects-container">PROYECTOS</a>
+      <a href="#competence-section">HABILIDADES</a>
     </div>
     <div class="col-sm-3">
       <a href="">CONTACTO</a>
-      <a href="">SOBRE MI</a>
+      <a href="#skills-section">SOBRE MI</a>
     </div>
 
 
@@ -528,7 +528,49 @@
     <script src="./assets/js/filters.js"></script>
 
     <script>
+      const skillsContainer       = document.querySelector('.art-director-section');
+      const artDirectorContainer  = document.querySelector('.skills-container');
+      const impactSection         = document.querySelector('.impact-section');
+      const competenceContainer   = document.querySelector('.competence-section')
+      const projectsContainer     = document.querySelector('.projects');
 
+      const observerSection       = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  switch(entry.target.id) {
+                    case 'art-director-section':
+                      typeWriter()
+                      break;
+                    case 'skills-section':
+                      console.log("de skills-section")
+                      break;
+                    case 'impact-section':
+                      let exp = calcularExperiencia('2017-02-28');
+                      number_counter(exp, 'experience-counter'); 
+                      number_counter(85, 'brand-counter', 100);
+                      break;
+                    case 'competence-section':
+                      const num_progress_bar = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
+                      num_progress_bar.forEach(numero => progressAnimate(110,numero,50));                      
+                      break;
+                    case 'projects-container':
+                      console.log("de Proyectos")
+                      break;
+                    default:
+                      console.log("Estoy en " + entry.target.id )
+                  } 
+                } else {
+                  // Al salir del elemento
+                  console.log("Estoy fuera");
+                }
+            });
+        });
+
+        observerSection.observe(skillsContainer);
+        observerSection.observe(artDirectorContainer);
+        observerSection.observe(impactSection);
+        observerSection.observe(competenceContainer);
+        observerSection.observe(projectsContainer);
 
 
 

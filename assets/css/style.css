@@ -50,16 +50,20 @@ nav{
     background-color: #FFF;
 }
 
-.button-red{
+.button-red:hover{
     color: #C30001;   
     background-color: #FFF;
     margin-right: 25px;
 }
 
-.button-red:hover{
+.button-red{
     background-color: #C30001;   
     color: #FFF;
     margin-right: 25px;
+}
+
+.button-white:hover{
+    background-color: rgba(195, 0, 1, .1)
 }
 
 .navbar-nav{
@@ -266,7 +270,7 @@ p.card-text{
     font-family: 'Inter';
     text-decoration: none;
     font-weight: 700;
-    color: #2B2B2B;
+    /*color: #2B2B2B;*/
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0%;
@@ -276,6 +280,8 @@ p.card-text{
     gap: 10px;
     border-radius: 100px;
     text-transform: uppercase;
+    margin-right: 0px;
+    
   }
 
   .card.project-card{
@@ -330,16 +336,36 @@ margin-top: 1rem;
     text-decoration: none;
     color: #2B2B2B;
     margin-bottom: 2rem;
+    height: 36px;
 }
 
 .more-btn:hover::before {
-    border: none;    
+    content: none;
+    display: none;
 }
 
 .more-btn:hover{
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
     border: #2B2B2B solid 1px;
     border-radius: 600px;
     padding: 10px;
+    background-color: #C30001;
+    color: #FFF;
+    height: 36px;
+    margin-bottom: 2rem;
+}
+
+.more-btn:hover::after{
+    content: " 🡥";
+}
+
+.more-btn-container{
+    height: 40px;
 }
 
 footer{
