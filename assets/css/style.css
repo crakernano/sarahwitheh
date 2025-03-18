@@ -4,6 +4,10 @@
     src: url('../fonts/inter.ttf');
 }
 
+body{
+    background-color: #F0F0F0 !important;
+}
+
 nav{
     margin-top: 40px;
     border-bottom:#C30001 1px solid;
@@ -47,6 +51,12 @@ nav{
 }
 
 .button-red{
+    color: #C30001;   
+    background-color: #FFF;
+    margin-right: 25px;
+}
+
+.button-red:hover{
     background-color: #C30001;   
     color: #FFF;
     margin-right: 25px;
@@ -104,4 +114,314 @@ nav{
     line-height: 24px;
     letter-spacing: 0%;
     width: 83%;
+}
+
+.impact-section{
+    background-image: url('../img/sarah_impacto.png');
+    background-repeat: no-repeat;
+    background-position-x:left;
+    background-position-y:top;
+    background-size:contain;
+    height: 658px;
+    width: 1554.76px;
+}
+
+.custom-header-2{
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: -2%;
+    color: #C30001;
+    margin-bottom: 2rem;
+}
+
+.custom-header-3{
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -2%;
+    color: #C30001;
+    text-align: center;
+}
+
+.special_number{
+    font-family: 'Inter';
+    color: #C30001;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 75px;
+    letter-spacing: -2%;
+}
+
+p{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
+
+.card{
+    border: none !important;
+}
+
+h5.card-header{
+    background-color: transparent !important;
+    border-bottom: none;
+}
+
+h5.card-header img{
+    background-color: #C30001;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+h5.card-title{
+    font-family: 'Inter';
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 2%;
+    color: #2B2B2B;
+}
+
+p.card-text{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #2B2B2B;
+    text-align: center;
+}
+
+.card-text span{
+    display: block;
+}
+
+/* .competence-section{
+    background-image: url('../img/sarah_about.png');
+    background-repeat: no-repeat;
+    background-position-x:right;
+    background-position-y:top;
+} */
+
+#background-competence-img{
+    opacity: .3;
+    float: right;
+    position: absolute;
+    right: -200px;
+    height: 500px;
+    z-index: 2;    
+    transition: top 0.2s;
+}
+
+.header-shadow{
+    font-family: 'Inter';
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -2%;
+    text-align: center;
+    position: relative;
+    top: -77px;
+    color: #C30001;
+    font-size: 120px;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.progress-bar{
+    background-color: #C30001 !important;
+}
+
+.skill-row{
+    margin-bottom: 3rem;
+}
+
+.progress-label{
+    margin-bottom: 1rem;;
+}
+
+.portfolio-filters {
+    margin-bottom: 30px;  
+    text-align: center;  
+  }
+  
+  .portfolio-filters li {
+    display: inline-block;    
+    margin-right: 15px;
+    /* font-size: 13px;
+    opacity: 0.7; */
+  }
+  
+  .portfolio-filters li.active {
+/*    opacity: 1; */
+    color: #c40001;
+  }
+  
+  .portfolio-filters li a {
+    font-family: 'Inter';
+    text-decoration: none;
+    font-weight: 700;
+    color: #2B2B2B;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    cursor: pointer;
+    border: 1px solid #2B2B2B;
+    padding: 16px 40px 16px 40px;
+    gap: 10px;
+    border-radius: 100px;
+    text-transform: uppercase;
+  }
+
+  .card.project-card{
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 24px;    
+    background-color: #FFF;
+    border-radius: 30px;
+    color: #2B2B2B;
+    letter-spacing: -2%;
+    line-height: 40px;
+    text-align: start;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    animation: animate__fadeIn;
+    animation-duration: 2s;
+}
+
+.card.project-card .card-body{
+    padding-right: 0px !important;    
+  }
+
+.card.project-card img{
+border-bottom-right-radius: 30px;
+margin-bottom: -16px;
+margin-top: 1rem;
+}
+
+.more-btn::before{
+    content: "🡢";
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    border: #2B2B2B solid 1px;
+    border-radius: 600px;
+    height: 36px;
+    width: 36px;
+    display: inline-flex;
+    color: #2B2B2B;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.more-btn{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -2%;
+    text-decoration: none;
+    color: #2B2B2B;
+    margin-bottom: 2rem;
+}
+
+.more-btn:hover::before {
+    border: none;    
+}
+
+.more-btn:hover{
+    border: #2B2B2B solid 1px;
+    border-radius: 600px;
+    padding: 10px;
+}
+
+footer{
+    height: 440px;
+    background-color: #C30001;
+    padding: 5% 10% 5% 10%;
+}
+
+footer img{
+    height: 41px;
+    width: 41px;
+    background-color: #FFF;    
+}
+
+
+.footer-container{
+    margin-left: 10%;
+    margin-top: 5% !important;
+}
+
+footer h3{
+    font-family: 'Inter';
+    color: #FFF;
+    font-weight: 700;
+    font-size: 34;
+    line-height: 40px;
+    letter-spacing: 3%;
+}
+
+footer p{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 3%;
+    color: #FFF;
+}
+
+footer a{
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+footer a::after{
+    content: " 🡥";
+}
+
+
+.social-menu{
+    margin-top: 2rem;
+}
+.social-menu li{
+    display: inline-block;
+    height: 41px;
+    width: 41px;
+    background-color: #FFF;
+    border-radius: 100px;
+    margin-right: 10px;
+    /*padding: 5px 5px 5px 5px;*/
+}
+
+.social-menu img{
+    border-radius: 100px;
+    height: 22px;
+    width: 22px;
+}
+
+.social-menu a{
+    padding: 10px;
+}
+.social-menu a::after{
+    content: "";
+}
+
+.portfolio-filters li a.active{
+    color: #C30001;
 }
