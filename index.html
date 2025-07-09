@@ -2,703 +2,494 @@
 <html lang="en">
   <head>
     <title>Sarah website</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/flickity.css">
-    <script src="https://kit.fontawesome.com/78d82b2566.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- animate CSS-->
-    <link rel="stylesheet" href="assets/js/animation.css">
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/js/flickity.pkgd.min.js"></script>
-    <!-- sweet Alert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://unpkg.com/sweetalert2@9.5.3/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WR0LNGP5ED"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-WR0LNGP5ED');
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/counters.js"></script>    
+    <script src="./assets/js/progressBarAnimate.js"></script>
   </head>
+  <body>
+    <script>AOS.init();</script>
 
-  <style></style>
-<script> 
-  var features = ['left=10',
-                'top=10',
-                'location=no',
-                'menubar=no',
-                'directories=no',
-                'resizable=no',
-                'scrollbars=no',
-                'status=no',
-                'titlebar=no',
-                'toolbar=no',
-                'width= 600',
-                'height=600'];
-
-  function ventanaSecundaria (URL){ 
-     window.open(URL,"ventana1",features.join(',')); 
-  } 
-
-  function loadMore(){
-    var morePorfolio = document.getElementById("see-more-one");
-    var moreButton = document.getElementById("more");
-    morePorfolio.style.display = "inline";
-    moreButton.style.display = "none";
-  }
-
-  function fliterCategory(branding){
-    filters = ["filter-all","filter-design","filter-branding","filter-ux","filter-music"];
+    <script> 
     
-    filters.map(function(x) {
-      var titleSelected = document.getElementById(x);  
-      titleSelected.classList.remove('active');
-    });
-
-    idSelected = `filter-${branding}`
-    var titleSelected = document.getElementById(idSelected);
-    titleSelected.classList.add('active');
-    var items_filter =  $( ".item.standard" );
-
-    for (let i = 0; i < items_filter.length; i++) {
-      console.log(items_filter[i].dataset.groups);
-
-      if(!items_filter[i].dataset.groups.includes(`category_${branding}`)){
-        items_filter[i].style.display = "none"; 
-      }else{
-        items_filter[i].style.display = "block"; 
-      }
-    }
-  }
-
-  function portfolio_init() {
-        var portfolio_grid = $('.portfolio-grid'),
-            portfolio_filter = $('.portfolio-filters');
-
-        if (portfolio_grid) {
-
-        }
-    }
-
-  function selectedBehance(){
-  Swal.fire({
-    title: '¿Qué Behance desea visitar?',    
-    icon: 'question',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#3085d6',
-    cancelButtonText: 'UX',
-    confirmButtonText: 'Art Director'
-  }).then((result) => {
-    console.log(result)
-    if (result.value == true) {
-      window.open("https://www.behance.net/sarahwitheh", "_blank");
-    }    
-    if(result.dismiss == 'cancel'){
-      window.open("https://www.behance.net/sarahschaefl2", "_blank");
-    }
-  })
-  }
-
-  async function contactMe(){
-      const { value: formValues } = await Swal.fire({
-      title: 'Contact Me',
-      html:
-        '<label> E-mail: </label>' +
-        '<input id="swal-input1" class="swal2-input">' +
-        '<label> Message: </label>' +
-        '<textarea id="swal-input2" class="swal2-textarea">',
-      focusConfirm: false,
-      preConfirm: () => {
-        return [
-          document.getElementById('swal-input1').value,
-          document.getElementById('swal-input2').value
-        ]
-      }
-    })
-
-    if (formValues) {
-      // Swal.fire(JSON.stringify(formValues))
-      Swal.fire({
-        icon: 'success',
-        title: 'success',
-        text: 'Send',
-        footer: '<a href="http://linkedin.com/in/sarah-schaefl%C3%A9-062235184/" target="_blank"><span class="btn-inner--icon" style="font-size: 1.5rem;"><i class="fab fa-linkedin"style="color: black;"></i></span></a>'
-      })  
-     }
-  }
-
-
-  $(document).ready(function () {
-    console.log("Hello World!");
-    // Initialize Portfolio grid
-    var $portfolio_container = $(".portfolio-grid");
-    console.log($portfolio_container.parent());
-  });
-  </script>
-
-
-
-<body>
-
-    <div id="wrapper">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between" id="header">
-          <img src="assets/img/cabecera.png" alt="Snow" style="width:100%;">
-          <div class="titulo">Lorem Ipsum</div>
-          <div class="subtitulo">Lorem Ipsum sit amet</div>
-          <div class="intro-text">Lorem ipsum dolor sit amet. Qui labore similique eum ipsam sed sunt galisum ea
-            recusandae quasi ut recusandae cupiditate aut rerum nostrum qui iste eveniet.
-            Qui natus odio eum alias enim ab voluptatem quaerat ut voluptatem quam.</div>  
-            <button type="button" class="header-buton" id="portfolio_button" onclick="location.href='#porfolio'">Portfolio</button>
-            <button type="button" class="header-buton" id="contact_me_button"onclick="contactMe()" >Contact me</button>
+      //let exp = calcularExperiencia('2017-02-28');
+      
+      window.onload = function() {
+        //typeWriter(); 
+        //number_counter(exp, 'experience-counter'); 
+        //number_counter(85, 'brand-counter', 100);
         
-        </header>
-        <div class="more" >
-        <div class="row align-items-start" data-aos="fade-up">
-            <div class="col" id="more-image">
-              <div class="moreImage"> 
-                <img src="assets/img/paceholder.png">
-              </div>
-        
-            </div>
-            <div class="col">
-            <h2>A bit more about me</h2>
-            
-            <p>Lorem ipsum dolor sit amet. Et molestias nesciunt eos rerum dolorum 33 reiciendis
-        
-            iure sed laudantium porro ex cumque totam non sequi blanditiis. Sed aperiam quas
-        
-            reiciendis ipsam At rerum facilis qui necessitatibus enim ea recusandae ratione.
-        
-            Eum mollitia placeat est quae earum ea laboriosam placeat sit alias debitis ut
-        
-            reiciendis consequatur sit nisi odit. Eos odit optio in adipisci quidem quis sequi.
-        
-            Sed assumenda aperiam. </p>
-        
-        
-            <p>Ut nihil odit in deleniti facere aut quia adipisci At consequatur veritatis ut ducimus
-                nisi sit quia dolorem et error sint. Qui odit deserunt quo unde dolorum et alias
-                nostrum ut sunt cupiditate. Et nihil laboriosam ut eveniet voluptas et doloremque
-                delectus eos enim iure qui inventore omnis et blanditiis consequuntur.
-            </p>
-
-            <div class="row">
-                <div class="col-sm-6">
-                    <span class="special_number fadeIn">7</span> Years of experience
-                </div>
-                <div class="col-sm-6">
-                    <span class="special_number fadeIn">1800</span> Successful projects completed
-                </div>
-            </div>
+        //const num_progress_bar = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
+        //num_progress_bar.forEach(numero => progressAnimate(110,numero,50));
 
 
-            </div>
-        </div> 
-        
-        <div class="flex-wrap align-items-center" data-aos="fade-up" style="margin-top:4rem;">
-            
-            
-            <!-- Estos titulos se tienen que poder simplificar -->
-            <h2 class ="sarahSubTitle">Services<span class ="sarahSubTitle">Services</span></h2>
-            <div class="row">
-                <div class="col-sm-4">
-        
-                    <div class="card slideUp">
-                        <h5 class="card-header text-center text-white"><img src="assets/img/lightbulb-solid.svg" width="30px"></h5>
-                        <div class="card-body">
-                            <h5 class="card-title">Graphic Design</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
-        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-        
-                    <div class="card slideUp">
-                        <h5 class="card-header text-center text-white"><img src="assets/img/lightbulb-solid.svg" width="30px"></h5>
-                        <div class="card-body">
-                            <h5 class="card-title">Branding</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
-        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-        
-                    <div class="card slideUp">
-                        <h5 class="card-header text-center text-white"><img src="assets/img/lightbulb-solid.svg" width="30px"></h5>
-                        <div class="card-body">
-                            <h5 class="card-title">UI/Web Design</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
-        
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- FIN DE LA PRIMERA FILA-->
-            <div class="row" style="margin-top: 5rem;">
-                <div class="col-sm-4">
-        
-                    <div class="card slideUp">
-                        <h5 class="card-header text-center text-white"><img src="assets/img/lightbulb-solid.svg" width="30px"></h5>
-                        <div class="card-body">
-                            <h5 class="card-title">Motion Graphic</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
-        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-        
-                    <div class="card slideUp">
-                        <h5 class="card-header text-center text-white"><img src="assets/img/lightbulb-solid.svg" width="30px"></h5>
-                        <div class="card-body">
-                            <h5 class="card-title">Video editing</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
-        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-        
-                    <div class="card slideUp">
-                        <h5 class="card-header text-center text-white"><img src="assets/img/lightbulb-solid.svg" width="30px"></h5>
-                        <div class="card-body">
-                            <h5 class="card-title">Graphic Design</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias Lorem ipsum dolor sit amet. Et molestias</p>
-        
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- FIN SEGUNDA FILA-->
+      };
+      
+      </script>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!--<a class="navbar-brand" href="#">SA_ЯⱯH<span style="color: #C30001;">WITHeH.</span></a>-->
+        <a class="navbar-brand" href="#">SA_<span style="display: inline-block;transform: rotateY(180deg);">R</span><span style="display:inline-block;transform: rotateX(180deg);">A</span>H<span style="color: #C30001;">WITHeH.</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" aria-current="page" href="#projects-container">Proyectos</a>
+            <a class="nav-link" href="#competence-section">Habilidades</a>
+            <a class="nav-link" href="#skills-section">Sobre mi</a>
+          </div>
+          <div class="call-action-section">
+            <button class="custom-button button-white">¿HABLAMOS?  🡥</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    </div><!-- FIN DEL CONTAINER -->
+      <section class="art-director-section" id="art-director-section" data-aos="fade-up">
+        <div class="col-6">
+          <h2 class="custom-subtitle">CADA TRAZO Y DETALLE IMPORTA</h2>
+          <h1 class="custom-title" id="WIA-display">Soy directora de arte.</h1>
+          
+          <p class="custom-text-block">
+            <b>SA_<span style="display: inline-block;transform: rotateY(180deg);">R</span><span style="display:inline-block;transform: rotateX(180deg);">A</span>H.</b> una diseñadora que le encanta asesorar cómo dar forma a 
+            los proyectos que me presentan las agencias de publicidad, startups 
+            o clientes particulares. Mi pasión es transformar tus ideas en un 
+            diseño estratégico para que destaque en un mercado cada vez más 
+            competitivo.
+          </p>
+            <button class="custom-button button-red">Porfolio</button>
+            <button class="custom-button button-white">¿HABLAMOS?  🡥</button>
+          </div>
+      </section> <!-- FIN DE SECCIÓN SOY DIRECTORA DE ARTE-->
 
-            <h2 class ="sarahSubTitle">Skills<span class ="sarahSubTitle">Skills</span></h2>
-            <div class="container skills-container" data-aos="fade-up" id="skills-section">
-                <div class="row skill-row">
-                  <div class="col">
-                    <div class="row progress-label">
-                        <div class="col-10"><span class="progress-label">Skill 1</span></div>
-                        <div class="col-2" style="text-align: end;"><span class="text-end">90%</span></div>
-                    </div> 
-                        <div class="progress">                            
-                            <!--<div class="progress-bar" style="width: 90%" role="progressbar" aria-label="Basic example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
-                            <span class="skill skill-animation uno"></span>
-                        </div>                      
-                  </div>
-                  <div class="col">
-                    <div class="row progress-label">
-                        <div class="col-10"><span class="progress-label">Skill 2</span></div>
-                        <div class="col-2" style="text-align: end;"><span class="text-end">60%</span></div>
-                    </div> 
-                    <div class="progress">                            
-                        <!--<div class="progress-bar" role="progressbar" style="width: 60%" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
-                        <span class="skill skill-animation dos"></span>
-                    </div>
-                  </div> 
-                  
-                                  
-                </div>
-                <!-- Fin de la primera fila--> 
-                <div class="row skill-row">
-                    <div class="col">
-                        <div class="row progress-label">
-                            <div class="col-10"><span class="progress-label">Skill 3</span></div>
-                            <div class="col-2" style="text-align: end;"><span class="text-end">40%</span></div>
-                        </div> 
-                          <div class="progress">                            
-                              <!--<div id="skill3" class="progress-bar" style="width: 40%" role="progressbar" aria-label="Basic example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
-                              <span class="skill skill-animation tres"></span>
-                            </div>                      
-                    </div>
-                   <div class="col">
-                    
-                    <div class="row progress-label">
-                        <div class="col-10"><span class="progress-label">Skill 4</span></div>
-                        <div class="col-2" style="text-align: end;"><span class="text-end">60%</span></div>
-                    </div>
-                    
-                     
-                      <div class="progress">                            
-                          <!--<div class="progress-bar" role="progressbar"style="width: 60%"  aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
-                          <span class="skill skill-animation cuatro"></span>
-                      </div>
-                    
-                        
-                    </div> 
-                </div>              
-                <!--Fin de la segunda fila-->
 
-                <div class="row skill-row">
-                    <div class="col">
-                        <div class="row progress-label">
-                            <div class="col-10"><span class="progress-label">Skill 5</span></div>
-                            <div class="col-2" style="text-align: end;"><span class="text-end">60%</span></div>
-                        </div> 
-                          <div class="progress">                            
-                              <!--<div class="progress-bar" style="width: 60%" role="progressbar" aria-label="Basic example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
-                              <span class="skill skill-animation cinco"></span>
-                          </div>                      
-                    </div>
-                   <div class="col">
-                    <div class="row progress-label">
-                        <div class="col-10"><span class="progress-label">Skill 6</span></div>
-                        <div class="col-2" style="text-align: end;"><span class="text-end">60%</span></div>
-                    </div> 
-                      <div class="progress">                            
-                          <!--<div class="progress-bar" role="progressbar" style="width: 60%"  aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
-                          <span class="skill skill-animation seis"></span>
-                      </div>
-                    </div> 
-                </div>              
+    <div style="height: 100px;"></div>
 
-                <!-- Fin de la tercear fila-->
+    <section class="impact-section" id="impact-section" data-aos="fade-up">
+      <div class="col-6" style="float: right; margin-top: 5%;">
+        <h2 class="custom-header-2">Más que diseño, impacto </h2>
+        <p>Siempre he pensado que detrás de cada marca o proyecto hay algo más: sueños,
+          emociones y un propósito profundo que merece ser contado de manera auténtica.</p>
 
-                <div class="row skill-row">
-                    <div class="col">
-                        <div class="row progress-label">
-                            <div class="col-10"><span class="progress-label">Skill 7</span></div>
-                            <div class="col-2" style="text-align: end;"><span class="text-end">60%</span></div>
-                        </div>                          
-                          <div class="progress">                            
-                              <!--<div class="progress-bar" style="width: 60%" role="progressbar" aria-label="Basic example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
-                              <span class="skill skill-animation siete"></span>
-                          </div>                      
-                    </div>
-                   <div class="col">
-                    <div class="row progress-label">
-                        <div class="col-10"><span class="progress-label">Skill 8</span></div>
-                        <div class="col-2" style="text-align: end;"><span class="text-end">100%</span></div>
-                    </div> 
-                      <div class="progress">                            
-                          <!--<div class="progress-bar" role="progressbar" style="width: 100%" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="background-color:red !important;"></div>-->
-                          <span class="skill skill-animation ocho"></span>
-                      </div>
-                    </div> 
-                </div>              
+        <p>Cuando trabajo no solo pienso en colores o composiciones. Me detengo a 
+          entender quién está detrás, que historia quiere contar y, sobre todo, como ese 
+          diseño puede reflejar su esencia en quienes lo vean.</p>
 
-                <!--Fin de la cuarta fila-->
+        <p>El diseño es una herramienta transformadora que impulsa a las marcas a inspirar, 
+          fortaleces comunidades y conectar a las personas de manera significativa.
+          Cada proyecto es un nuevo viaje, una nueva oportunidad de descurbir, experimentar y crear algo único. Si tienes una idea que contar o un proyecto, 
+          em encantaría ayudarte a convertirlo en algo tangible. Porque al final, el diseño no es solo un trabajo: es mi manera de conectar contigo y con el mundo</p>
 
-                <h2 class ="sarahSubTitle">My Work<span class ="sarahSubTitle">My Work</span></h2>
-
-                <div class="row" id="porfolio" data-aos="fade-up">
-                    <div class="col-xs-12 col-sm-12">
-                        <ul class="portfolio-filters">
-                            <li id="filter-all" class="active">
-                              <a  class="filter btn btn-sm btn-link" 
-                                  data-group="category_all"
-                                  onclick="fliterCategory('all')">All</a></li>
-                            <li id="filter-design">
-                              <a  class="filter btn btn-sm btn-link" 
-                                  data-group="category_design"
-                                  onclick="fliterCategory('design')">Graphic Design</a></li>
-                            <li id="filter-branding">
-                              <a class="filter btn btn-sm btn-link" 
-                                  data-group="category_branding" 
-                                  onclick="fliterCategory('branding')">Branding</a></li>
-                            <li id="filter-ux">
-                              <a class="filter btn btn-sm btn-link" 
-                                 data-group="category_ux"
-                                 onclick="fliterCategory('ux')">UI/Web design</a></li>
-                            <li id="filter-music">
-                              <a  class="filter btn btn-sm btn-link" 
-                                  data-group="category_music"
-                                  onclick="fliterCategory('music')">Music</a></li>
-                        </ul>
-                        <div class="portfolio-grid three-columns">
-              
-                            <figure class="item standard" data-groups='["category_all", "category_design"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/book_cover.jpg" alt="Item 1" title="" class="portfolio-image"/>
-                                <a href="javascript:ventanaSecundaria('porfolio/portfolio-book-cover.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-  
-                            <figure class="item standard" data-groups='["category_all", "category_design"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/animals.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('porfolio/portfolio-animals.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-
-                            <figure class="item standard" data-groups='["category_all", "category_design", "category_branding"]'>
-                                <div class="portfolio-item-img slideUp">
-                                  <img src="assets/img/buenazo.jpg" alt="Item 1" title=""/>
-                                  <a href="javascript:ventanaSecundaria('porfolio/portfolio-buenazo.html')" class="ajax-page-load"></a>
-                                </div>
-                              </figure>
-                        </div>
-
-                        <div class="portfolio-grid three-columns">
-              
-                            <figure class="item standard" data-groups='["category_all", "category_music"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/vinyl_cover.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-  
-                            <figure class="item standard" data-groups='["category_all", "category_music"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/equantum.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-
-                            <figure class="item standard" data-groups='["category_all", "category_design"]'>
-                                <div class="portfolio-item-img slideUp">
-                                  <img src="assets/img/challenge_adobe.jpg" alt="Item 1" title=""/>
-                                  <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
-                                </div>
-                              </figure>
-                        </div>
-
-                        <div class="portfolio-grid three-columns">
-              
-                            <figure class="item standard" data-groups='["category_all", "category_design"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/poster_teatro.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-  
-                            <figure class="item standard" data-groups='["category_all", "category_design"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/infografia_tipografia.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-
-                            <figure class="item standard" data-groups='["category_all", "category_design", "category_branding"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/portfolio-salsa-bachata/salsa_bachata.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-
-                        </div>
-                        
-                    </div>
-
-                    <!-- A partir de aquí, solo al pulsar en MORE-->
-                    <div class="col-xs-12 col-sm-12" id="see-more-one">
-                        <div class="portfolio-grid three-columns">
-              
-                            <figure class="item standard" data-groups='["category_all", "category_branding", "category_design", "category_ux"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/porfolio-nh/NH.jpg" alt="Item 1" title="" class="portfolio-image"/>
-                                <a href="javascript:ventanaSecundaria('portfolio-nh.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-  
-                            <figure class="item standard" data-groups='["category_all", "category_branding", "category_design", "category_ux"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/portfolio-Calendar-Infographic/calendar_infographic.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio-calendar-infographic.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-
-                            <figure class="item standard" data-groups='["category_all", "category_branding", "category_music"]'>
-                                <div class="portfolio-item-img slideUp">
-                                  <img src="assets/img/porfolio-acordes/acordes.jpg" alt="Item 1" title=""/>
-                                  <a href="javascript:ventanaSecundaria('porfolio/portfolio-acordes.html')" class="ajax-page-load"></a>
-                                </div>
-                              </figure>
-                        </div>
-
-                        <div class="portfolio-grid three-columns">
-              
-                            <figure class="item standard" data-groups='["category_all", "category_branding"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/porfolio-ugartebeer/ugartebeer.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio-ugartebeer.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-  
-                            <figure class="item standard" data-groups='["category_all", "category_branding"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/portfolio-Case-UX/padelIMBA.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio-case-ux.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-
-                            <figure class="item standard" data-groups='["category_all", "category_design", "category_branding", "category_ux"]'>
-                                <div class="portfolio-item-img slideUp">
-                                  <img src="assets/img/porfolio-zamparte/zamparte.jpg" alt="Item 1" title=""/>
-                                  <a href="javascript:ventanaSecundaria('portfolio-zamparte.html')" class="ajax-page-load"></a>
-                                </div>
-                              </figure>
-                        </div>
-
-                        <div class="portfolio-grid three-columns">
-              
-                            <figure class="item standard" data-groups='["category_all", "category_design", "category_branding", "category_ux", "category_divulgacion"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/porfolio-Happy-Earth/happy_eart.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio-happy-eart.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-
-                            <figure class="item standard" data-groups='["category_all", "category_design"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/portfolio-people/people_01.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio-people.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-
-                            <figure class="item standard" data-groups='["category_all", "category_design"]'>
-                              <div class="portfolio-item-img slideUp">
-                                <img src="assets/img/portfolio-coronavirus/coronavirus.jpg" alt="Item 1" title=""/>
-                                <a href="javascript:ventanaSecundaria('portfolio-happy-eart.html')" class="ajax-page-load"></a>
-                              </div>
-                            </figure>
-                        </div>
-                        
-                    </div>
-                    <!-- -->
-                    <div style="text-align:center;margin-left: auto;margin-right: auto;padding: 3rem;">
-                      <button type="button"
-                              class="show-more" 
-                              onclick="loadMore()"
-                              id="more" >
-                              <span class="button__text">Load More</span>
-                      </button>            
-                    </div>                   
-                </div>
+          <div class="row">
+            <div class="col-sm-3" style="margin-right: -80px;"><span class="special_number fadeIn" id="experience-counter">+7</span></div>
+            <div class="col-sm-3" style="width: 24% !important;padding-top: 2%;"><p>Años de experiencia</p></div>
+            <div class="col-sm-3" style="margin-right: -30px;"><span class="special_number fadeIn" id="brand-counter">+85</span></div>
+            <div class="col-sm-3" style="width: 26% !important; padding-top: 2%;""><p>Identidades de marca creadas desde cero </p></div>
 
         </div>
+      </div>
+    </section><!-- FIN DE LA SECCION MAS IMPACTO-->
+    <img src="./assets/img/sarah_about.png" id="background-competence-img" class="flying-image">
+    <div style="height: 200px;"></div>
+    
+    <section class="competence-section" id="competence-section" data-aos="fade-up">
+      <h2 class="custom-header-3">Habilidades</h2>      
+      <div class="header-shadow"><span>Habilidades</span></div>
+
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+
+          <div class="card slideUp">
+              <h5 class="card-header text-center"><img src="assets/img/badget/hogar 1.png"></h5>
+              <div class="card-body">
+                  <h5 class="card-title">Marketing</h5>
+                  <p class="card-text">
+                    <span>Flyers, posters, banners, social media ads</span>
+                    <span>Displays, stands para eventos y</span>
+                    <span>publicidad exterior</span>
+                  </p>
+
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+
+          <div class="card slideUp">
+              <h5 class="card-header text-center"><img src="assets/img/badget/maletin 1.png"></h5>
+              <div class="card-body">
+                  <h5 class="card-title">Branding</h5>
+                  <p class="card-text">
+                    <span>Diseñar logotipos, manuales de identidad</span>
+                    <span>y elementos visuales coherentes</span>
+                    <span>para una marca</span>
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+
+          <div class="card slideUp">
+              <h5 class="card-header text-center"><img src="assets/img/badget/usuarios-alt 1.png"></h5>
+              <div class="card-body">
+                  <h5 class="card-title">Product Designer</h5>
+                  <p class="card-text">
+                    <span>Desarrollo de productos digitales centrados</span>
+                    <span>en el usuario, diseñando experiencias</span>
+                    <span>intuiticas que también cumplen con los</span>
+                    <span>objetivos estratégicos de tu negocio</span>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- FIN DE LA PRIMERA FILA-->
+  <div class="row" style="margin-top: 5rem;">
+      <div class="col-sm-4">
+
+          <div class="card slideUp">
+              <h5 class="card-header text-center"><img src="assets/img/badget/globo 1.png"></h5>
+              <div class="card-body">
+                  <h5 class="card-title">Web (UX /UI)</h5>
+                  <p class="card-text">
+                    <span>Diseñar páginas web, aplicaciones y </span>
+                    <span>experiencias digitales, intuiticas para </span>
+                    <span>una buena experiencia</span>
+                  </p>
+
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+
+          <div class="card slideUp">
+              <h5 class="card-header text-center"><img src="assets/img/badget/Vector.png"></h5>
+              <div class="card-body">
+                  <h5 class="card-title">Editorial Design</h5>
+                  <p class="card-text">
+                    <span>E-books, brouchures, catálogos</span>
+                    <span>infografias, folletos y presentaciones</span>
+                  </p>
+
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+
+          <div class="card slideUp">
+              <h5 class="card-header text-center"><img src="assets/img/badget/row.png"></h5>
+              <div class="card-body">
+                  <h5 class="card-title">Motion Graphic</h5>
+                  <p class="card-text">
+                    <span>Animaciones, diseño de interfaces</span>
+                    <span>Interactivas, integración de contenido</span>
+                    <span>audiovisual</span>
+                  </p>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+  <!--                                                    FIN DE LA SECCION DE HABILIDADES                      -->
+  <div style="height: 100px;"></div>
+  <h2 class="custom-header-3">Sobre mí</h2>      
+  <div class="header-shadow"><span>Sobre mí</span></div>
+  <div class="container skills-container" data-aos="fade-up" id="skills-section">
+    <div class="row skill-row">
+      <div class="col-5">
+        <div class="row progress-label">
+            <div class="col-10"><span class="progress-label">Detallista</span></div>
+            <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-one" data-percentage="90">0%</span></div>
+        </div> 
+        <div class="progressbar" data-percentage="90%"></div>                
+            
+            
+      </div>
+      <div class="col-2"></div>
+      <div class="col-5">
+        <div class="row progress-label">
+            <div class="col-10"><span class="progress-label">Mente online y offline</span></div>
+            <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-two" data-percentage="95">0%</span></div>
+        </div> 
+        <div class="progressbar" data-percentage="95%"></div>
+      </div>
+      </div><!-- FIN DE SKILL ROW-->
+
+      <div class="row skill-row">
+        <div class="col-5">
+          <div class="row progress-label">
+              <div class="col-10"><span class="progress-label">Pixel perfect</span></div>
+              <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-three" data-percentage="80">0%</span></div>
+          </div> 
+          <div class="progressbar" data-percentage="80%"></div>                                  
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5">
+          <div class="row progress-label">
+              <div class="col-10"><span class="progress-label">Capacidad de organización</span></div>
+              <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-four" data-percentage="40">0%</span></div>
+          </div> 
+          <div class="progressbar" data-percentage="40%"></div>
+        </div>
+        </div><!-- FIN DE SKILL ROW-->
+
+        <div class="row skill-row">
+          <div class="col-5">
+            <div class="row progress-label">
+                <div class="col-10"><span class="progress-label">Investigación</span></div>
+                <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-five" data-percentage="50">0%</span></div>
+            </div> 
+            <div class="progressbar" data-percentage="50%"></div>           
+          </div>
+          <div class="col-2"></div>
+          <div class="col-5">
+            <div class="row progress-label">
+                <div class="col-10"><span class="progress-label">Observadora</span></div>
+                <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-six" data-percentage="90">0%</span></div>
+            </div> 
+            <div class="progressbar" data-percentage="90%"></div>
+            </div>
+          </div><!-- FIN DE SKILL ROW-->
+
+          <div class="row skill-row">
+            <div class="col-5">
+              <div class="row progress-label">
+                  <div class="col-10"><span class="progress-label">Recursiva</span></div>
+                  <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-seven" data-percentage="20">0%</span></div>
+              </div> 
+              <div class="progressbar" data-percentage="20%"></div>
+          </div><!-- FIN DE SKILL ROW-->
+          <div class="col-2"></div>
+            <div class="col-5">
+              <div class="row progress-label">
+                  <div class="col-10"><span class="progress-label">Trabajo en equipo</span></div>
+                  <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-eight" data-percentage="95">0%</span></div>
+              </div> 
+              <div class="progressbar" data-percentage="95%"></div>                
+          </div><!-- FIN DE SKILL ROW-->
+
+    </div><!--FIN DEL CONTAINER SKILLS-->
+                                                                            <!-- FIN DE SOBRE MI-->
+
+
+  </div><!-- Fin de la sección de habilidades -->
+  <div class="container projects" id="projects-container" data-aos="fade-up">
+    <div style="height: 100px;"></div>
+    <h2 class="custom-header-3">Proyectos</h2>      
+    <div class="header-shadow"><span>Proyectos</span></div>
+
+    <div class="filtros">
+      <ul class="portfolio-filters">
+        <li>
+          <a  class="custom-button" 
+              data-group="category_all"
+              id="filter-all"
+              onclick="fliterCategory(event)">Todo</a></li>
+        <li>
+          <a  class="custom-button" 
+              data-group="category_design"
+              id="filter-design"
+              onclick="fliterCategory(event)">Diseño Gráfico</a></li>
+        <li>
+          <a class="custom-button" 
+              data-group="category_branding" 
+              id="filter-branding"
+              onclick="fliterCategory(event)">Branding</a></li>
+        <li>
+          <a class="custom-button"  
+             data-group="category_ux"
+             id="filter-ux"
+             onclick="fliterCategory(event)">UI/Web design</a></li>
+        </ul>
     </div>
 
-    <div class="containerMobile">
-      <div class="gallery js-flickity"
-  data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
-        <div class="gallery-cell"><img src="assets/img/placeholder-color.jpg" alt="Item 1" title=""/></div>
-        <div class="gallery-cell"><img src="assets/img/1.jpg" alt="Item 1" title=""/></div>
-        <div class="gallery-cell"><img src="assets/img/placeholder.png" alt="Item 1" title=""/></div>
-        <div class="gallery-cell"><img src="assets/img/cabecera.png" alt="Item 1" title=""/></div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <div class="col" data-groups='["category_all", "category_design"]'>
+      <div class="card project-card animate__fadeIn">
+        <div class="card-body">
+          <h5 class="card-title">American Express</h5>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <img src="assets/img/portfoloio-american-expres/01_miniatura_trabajo 1.png" class="card-img-top" alt="American Express">
+        </div>
+      </div>
+    </div><!--Fin de american express-->
+    <div class="col" data-groups='["category_all", "category_branding"]'>
+      <div class="card project-card animate__fadeIn">
+        <div class="card-body">
+          <h5 class="card-title">Immune</h5>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <img src="assets/img/portfolio-immune/01_miniatura_trabajo 2.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div><!--Fin de american Immune-->
+
+    <div class="col" data-groups='["category_all", "category_branding"]''> 
+      <div class="card project-card animate__fadeIn">
+        <div class="card-body">
+          <h5 class="card-title">IE Business School</h5>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <img src="assets/img/portfolio-ieb/01_miniatura_trabajo 3.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div><!--Fin de IEB-->
+
+    <div class="col" data-groups='["category_all", "category_branding", "category_design", "category_ux"]'>
+      <div class="card project-card animate__fadeIn">
+        <div class="card-body">
+          <h5 class="card-title">Padelmba</h5>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <img src="assets/img/portfolio-padelmba/01_miniatura_trabajo 4.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div><!--Fin de padelmba-->
+    <div class="col" data-groups='["category_all", "category_branding", "category_design", "category_ux"]'>
+      <div class="card project-card animate__fadeIn">
+        <div class="card-body">
+          <h5 class="card-title">Pictet</h5>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <img src="assets/img/portfolio-pictet/01_miniatura_trabajo 6.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div><!--Fin de american Pictet-->
+
+    <div class="col" data-groups='["category_all", "category_branding", "category_design", "category_ux"]'>
+      <div class="card project-card animate__fadeIn">
+        <div class="card-body">
+          <h5 class="card-title">Motoluxe</h5>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <img src="assets/img/portfolio-motoluxe/01_miniatura_trabajo 5.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div><!--Fin de motoluxe-->
+
+    <div class="col" data-groups='["category_all", "category_ux"]'>
+      <div class="card project-card animate__fadeIn">
+        <div class="card-body">
+          <h5 class="card-title">Sony Pictures</h5>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <img src="assets/img/portfolio-sony/01_miniatura_trabajo 7.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div><!--Fin de Sony-->
+    <div class="col" data-groups='["category_all", "category_branding"]'>
+      <div class="card project-card animate__fadeIn">
+        <div class="card-body">
+          <h5 class="card-title">Ducati</h5>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <img src="assets/img/portfolio-ducati/01_miniatura_trabajo 9.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div><!--Fin de american Ducati-->
+
+    <div class="col" data-groups='["category_all", "category_ux"]'>
+      <div class="card project-card animate__fadeIn">
+        <div class="card-body">
+          <h5 class="card-title">MM Academy</h5>
+          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <img src="assets/img/portfolio-mmacademy/01_miniatura_trabajo 8.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div><!--Fin de MM Academy-->
+    </div>
+  </div>
+
+                                                                  <!-- FIN DE SECCION DE PROYECTOS-->
+<div style="height: 100px;"></div>
+<footer data-aos="fade-up">
+  <div class="row footer-container">
+    
+    <div class="col-sm-3">
+      <h3>Conóceme un poco en las redes sociales</h3>
+      <p>©2025, All rights reserved</p>
+      <p>support@sarahwitheh.com</p>
+      <div class="social-menu">
+        <li><a href=""><img src="assets/img/social/social_Be.png"/></a></li>
+        <li><a href=""><img src="assets/img/social/social_instagram.png"/></a></li>
+        <li><a href=""><img src="assets/img/social/social_linkedn.png"/></a></li>
+
       </div>
     </div>
-    
-</div>
-<div class="container" style="padding-left: 0; padding-right: 0; width: 100%;" id="footer-container">
-
-  <footer class="text-center text-lg-start">
-    <div class="container d-flex justify-content-center py-5">
-      <button 
-        type="button" 
-        onclick="selectedBehance()"
-        class="btn btn-facebook btn-icon-only rounded-circle" 
-        style="background-color: #FFF; color: black;">        
-          <span class="btn-inner--icon" style="font-size: 1.5rem;"><i class="fa fa-behance" style="color: black;"></i></span>        
-      </button>
-      <button type="button" class="btn btn-linkedin btn-icon-only rounded-circle" style="background-color: #FFF; margin-left: 2rem;">
-        <a href="http://linkedin.com/in/sarah-schaefl%C3%A9-062235184/" target="_blank">
-          <span class="btn-inner--icon" style="font-size: 1.5rem;"><i class="fab fa-linkedin"style="color: black;"></i></span>
-        </a>
-      </button>
-      <button type="button" class="btn btn-linkedin btn-icon-only rounded-circle" style="background-color: #FFF; margin-left: 2rem;">
-        <a href="http://instagram.com/sarah.s.witheh/?hl=es" target="_blank">
-          <span class="btn-inner--icon" style="font-size: 1.5rem;"><i class="fab fa-instagram"style="color: black;"></i></span>
-        </a>
-    </button>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-3">
+      <a href="#projects-container">PROYECTOS</a>
+      <a href="#competence-section">HABILIDADES</a>
+    </div>
+    <div class="col-sm-3">
+      <a href="">CONTACTO</a>
+      <a href="#skills-section">SOBRE MI</a>
     </div>
 
-    <!-- Copyright -->
-    <div class="text-center text-white p-3">
-      © 2023 Copyright:
-      <a class="text-white" href="https://sarahwitheh.com/">Sarah withe H</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  
-</div>
-      
-    <!-- Optional JavaScript -->
-
-    <script>
-
-    function animateprogress (id, val){    
-    
-    
-      var getRequestAnimationFrame = function () {  /* <------- Declaro getRequestAnimationFrame intentando obtener la máxima compatibilidad con todos los navegadores */
-          return window.requestAnimationFrame ||
-          window.webkitRequestAnimationFrame ||  
-          window.mozRequestAnimationFrame ||
-          window.oRequestAnimationFrame ||
-          window.msRequestAnimationFrame ||
-          function ( callback ){
-              window.setTimeout(enroute, 1 / 60 * 1000);
-          };
-            
-      };
-        
-      var fpAnimationFrame = getRequestAnimationFrame();   /* <--- Declaro una instancia de getRequestAnimationFrame para llamar a la función animación */
-      var i = 0;
-      var animacion = function () {
-                
-      if (i<=val)
-          {
-              document.querySelector(id).setAttribute("value",i);      /* <----  Incremento el valor de la barra de progreso */
-              document.querySelector(id+"+ span").innerHTML = i+"%";     /* <---- Incremento el porcentaje y lo muestro en la etiqueta span */
-              i++;
-              fpAnimationFrame(animacion);          /* <------------------ Mientras que el contador no llega al porcentaje fijado la función vuelve a llamarse con fpAnimationFrame     */
-          }
-                                            
-      }
-
-          fpAnimationFrame(animacion);   /*  <---- Llamo la función animación por primera vez usando fpAnimationFrame para que se ejecute a 60fps  */
-                  
-    }
-    </script>
 
 
-    <script>
+  </div>
+</footer>
 
-
-const theButton = document.querySelector(".show-more");
-
-theButton.addEventListener("click", () => {
-    //console.log("Boton pulsado");
-    theButton.classList.add("show-more--loading");
-
-    setTimeout(() => {
-      theButton.classList.remove("show-mode--loading");
-    }, 1000);
-});
-
-    </script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+    <script src="./assets/js/textEfects.js"></script>
+    <script src="./assets/js/bird.js"></script>
+    <script src="./assets/js/filters.js"></script>
+
     <script>
-      $(window).scroll(function() {
-        $('#animatedElement').each(function(){
-        var imagePos = $(this).offset().top;
-    
-        var topOfWindow = $(window).scrollTop();
-          if (imagePos < topOfWindow+400) {
-            $(this).addClass("slideUp");
-          }
+      const skillsContainer       = document.querySelector('.art-director-section');
+      const artDirectorContainer  = document.querySelector('.skills-container');
+      const impactSection         = document.querySelector('.impact-section');
+      const competenceContainer   = document.querySelector('.competence-section')
+      const projectsContainer     = document.querySelector('.projects');
+
+      const observerSection       = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  switch(entry.target.id) {
+                    case 'art-director-section':
+                      typeWriter()
+                      break;
+                    case 'skills-section':
+                      console.log("de skills-section")
+                      //moveBird()
+                      break;
+                    case 'impact-section':
+                      let exp = calcularExperiencia('2017-02-28');
+                      number_counter(exp, 'experience-counter',400); 
+                      number_counter(85, 'brand-counter', 100);
+                      break;
+                    case 'competence-section':
+                      //const num_progress_bar = ['two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
+                      //num_progress_bar.forEach(numero => progressAnimate(110,numero,50));
+                      animateProgressBar();
+                      //animateLabelProgressBar();
+                      break;
+                    case 'projects-container':
+                      console.log("de Proyectos")
+                      break;
+                    default:
+                      console.log("Estoy en " + entry.target.id )
+                  } 
+                } else {
+                  // Al salir del elemento
+                  console.log("Salgo de " + entry.target.id )
+                }
+            });
         });
-      });
+
+        observerSection.observe(skillsContainer);
+        observerSection.observe(artDirectorContainer);
+        observerSection.observe(impactSection);
+        observerSection.observe(competenceContainer);
+        observerSection.observe(projectsContainer);
+
+
+
     </script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
- <script>
- AOS.init();
- </script>
   </body>
 </html>
