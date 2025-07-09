@@ -159,7 +159,7 @@ nav{
     background-position-x: left;
     background-position-y: top;
     background-size: contain;
-    height: 658px;
+    /*height: 658px;*/
     width: 100%;
     max-width: 1554.76px;
     margin-left: auto;
