@@ -1,7 +1,7 @@
 var speed = 100;
 const WAI = ["Soy directora de arte.", "Soy creativa digital.", "Soy creadora de marcas."];
 
-for (let i = 0; i < WAI.length; i++) {console.log(WAI[i]);}
+//for (let i = 0; i < WAI.length; i++) {console.log(WAI[i]);}
 
 async function typeWriter() {
   document.getElementById("WIA-display").innerHTML = "";
