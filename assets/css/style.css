@@ -460,6 +460,9 @@ p.card-text{
     color: #2B2B2B;
     padding: 9px;
     margin-right: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: scale(1);
 }
 
 .more-btn{
@@ -473,18 +476,30 @@ p.card-text{
     margin-bottom: 2rem;
     height: 40px;
     width: 150px;
-    transition: 
-    width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 0.4s,
-    color 0.4s,
-    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateX(0);
-    overflow: hidden;
+    border: transparent solid 1px;
+    border-radius: 600px;
+    padding: 0;
+    background-color: transparent;
     display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.more-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #C30001;
+    border-radius: 600px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
 }
 
 .more-btn:hover::before {
-    content: none;
     display: none;
 }
 
@@ -492,27 +507,54 @@ p.card-text{
     font-family: 'Inter';
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 36px;
     letter-spacing: 0%;
     text-transform: uppercase;
     border: #2B2B2B solid 1px;
     border-radius: 600px;
-    padding: 10px;
-    background-color: #C30001;
+    padding: 0 50px 0 15px;
+    background-color: transparent;
     color: #FFF;
     height: 36px;
     margin-bottom: 2rem;
     width: 150px;
-    transform: translateX(20px); 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(195, 0, 1, 0.3);
+    z-index: 1;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.more-btn:hover::after{
-    content: " 🡥";
-    -webkit-transition: opacity 1.2s ease;
-    -moz-transition: opacity 1.2s ease;
-    -ms-transition: opacity 1.2s ease;
-    -o-transition: opacity 1.2s ease;
-    transition:  opacity 1.2s ease-out;
+.more-btn:hover::after {
+    width: 100%;
+}
+
+.more-btn:hover {
+    position: relative;
+}
+
+.more-btn:hover::before {
+    content: '🡥';
+    position: absolute;
+    top: 50%;
+    left: 105px;
+    transform: translateY(-50%);
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    z-index: 2;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    font-family: 'Inter';
 }
 
 .more-btn-container{
