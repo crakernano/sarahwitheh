@@ -499,8 +499,10 @@ p.card-text{
     z-index: -1;
 }
 
-.more-btn:hover::before {
-    display: none;
+/* La flecha original se desvanece cuando se hace hover */
+.more-btn:hover::before:first-child {
+    opacity: 0;
+    transform: scale(0.3) translateX(-20px);
 }
 
 .more-btn:hover{
@@ -543,10 +545,7 @@ p.card-text{
     position: absolute;
     top: 30%;
     left: 115px;
-    /*transform: translateY(-50%);*/
     color: #FFF;
-    /*font-size: 14px;*/
-    /*font-weight: 700;*/
     z-index: 2;
     display: inline-block;
     width: auto;
@@ -557,7 +556,22 @@ p.card-text{
     padding: 0;
     margin: 0;
     opacity: 1;
+    transform: scale(1) translateX(0);
     font-family: 'Inter';
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slideInFromLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Animación para que la flecha aparezca desde la izquierda */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
 }
 
 .more-btn-container{
