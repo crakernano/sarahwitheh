@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WR0LNGP5ED"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-WR0LNGP5ED');
+	</script>
+
     <title>Sarah website</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -11,6 +21,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/counters.js"></script>    
     <script src="./assets/js/progressBarAnimate.js"></script>
+    
   </head>
   <body>
     <script>AOS.init();</script>
@@ -37,7 +48,7 @@
     </div><!-- FIN DEL CONTAINER -->
     <section class="art-director-section" id="art-director-section" data-aos="fade-up">
       <div class="container">
-        <div class="col-6">
+        <div class="col-6" style="margin-top:4rem;">
           <h2 class="custom-subtitle">CADA TRAZO Y DETALLE IMPORTA</h2>
           <h1 class="custom-title" id="WIA-display">Soy directora de arte.</h1>
           <p class="custom-text-block">
@@ -55,17 +66,17 @@
 
     <div style="height: 100px;"></div>
 
-    <section class="impact-section" id="impact-section" data-aos="fade-up">
+    <section class="impact-section" id="impact-section" data-aos="fade-up" style="margin-left: 0px;">
       <div class="container">
         <div class="row justify-content-end align-items-center" style="margin-top: 5%;">
-          <div class="col-lg-6 col-md-10 col-12" style="padding-left: 4.5rem;">
+          <div class="col-lg-7 col-md-10 col-12" style="padding-left: 4.5rem;">
             <h2 class="custom-header-2">Más que diseño, impacto </h2>
-            <p>Siempre he pensado que detrás de cada marca o proyecto hay algo más: sueños,
+            <p style="text-align: justify;">Siempre he pensado que detrás de cada marca o proyecto hay algo más: sueños,
               emociones y un propósito profundo que merece ser contado de manera auténtica.</p>
-            <p>Cuando trabajo no solo pienso en colores o composiciones. Me detengo a 
+            <p style="text-align: justify;">Cuando trabajo no solo pienso en colores o composiciones. Me detengo a 
               entender quién está detrás, que historia quiere contar y, sobre todo, como ese 
               diseño puede reflejar su esencia en quienes lo vean.</p>
-            <p>El diseño es una herramienta transformadora que impulsa a las marcas a inspirar, 
+            <p style="text-align: justify;">El diseño es una herramienta transformadora que impulsa a las marcas a inspirar, 
               fortaleces comunidades y conectar a las personas de manera significativa.
               Cada proyecto es un nuevo viaje, una nueva oportunidad de descurbir, experimentar y crear algo único. Si tienes una idea que contar o un proyecto, 
               em encantaría ayudarte a convertirlo en algo tangible. Porque al final, el diseño no es solo un trabajo: es mi manera de conectar contigo y con el mundo</p>
@@ -79,19 +90,21 @@
         </div>
       </div>
     </section><!-- FIN DE LA SECCION MAS IMPACTO-->
-    <img src="./assets/img/sarah_about.png" id="background-competence-img" class="flying-image">
+    <!--<img src="./assets/img/sarah_about.png" id="background-competence-img" class="flying-image">-->
+    <img id="bird-anim" src="./assets/img/pajaro/bird1.png" alt="Pájaro aleteando">
     <div style="height: 200px;"></div>
     <section class="competence-section" id="competence-section" data-aos="fade-up">
       <div class="container">
         <h2 class="custom-header-3">Habilidades</h2>      
         <div class="header-shadow"><span>Habilidades</span></div>
-        <div class="row">
+        <div class="row" style="margin-top: 3rem;">
       <div class="col-sm-4">
-
-          <div class="card slideUp">
-              <h5 class="card-header text-center"><img src="assets/img/badget/hogar 1.png"></h5>
+          <!--<div class="bird"></div> -->          
+          
+          <div class="card slideUp skill-card">
+              <h5 class="card-header text-center" style="text-align: center;"><img src="assets/img/badget/hogar 1.png"></h5>
               <div class="card-body">
-                  <h5 class="card-title">Marketing</h5>
+                  <h5 class="card-title" style="text-align: center;">Marketing</h5>
                   <p class="card-text">
                     <span>Flyers, posters, banners, social media ads</span>
                     <span>Displays, stands para eventos y</span>
@@ -103,10 +116,10 @@
       </div>
       <div class="col-sm-4">
 
-          <div class="card slideUp">
+          <div class="card slideUp skill-card">
               <h5 class="card-header text-center"><img src="assets/img/badget/maletin 1.png"></h5>
               <div class="card-body">
-                  <h5 class="card-title">Branding</h5>
+                  <h5 class="card-title" style="text-align: center;">Branding</h5>
                   <p class="card-text">
                     <span>Diseñar logotipos, manuales de identidad</span>
                     <span>y elementos visuales coherentes</span>
@@ -117,14 +130,14 @@
       </div>
       <div class="col-sm-4">
 
-          <div class="card slideUp">
+          <div class="card slideUp skill-card">
               <h5 class="card-header text-center"><img src="assets/img/badget/usuarios-alt 1.png"></h5>
               <div class="card-body">
-                  <h5 class="card-title">Product Designer</h5>
+                  <h5 class="card-title" style="text-align: center;">Product Designer</h5>
                   <p class="card-text">
                     <span>Desarrollo de productos digitales centrados</span>
                     <span>en el usuario, diseñando experiencias</span>
-                    <span>intuiticas que también cumplen con los</span>
+                    <span>intuitivas que también cumplen con los</span>
                     <span>objetivos estratégicos de tu negocio</span>
                   </p>
               </div>
@@ -132,13 +145,13 @@
       </div>
   </div>
   <!-- FIN DE LA PRIMERA FILA-->
-  <div class="row" style="margin-top: 5rem;">
+  <div class="row" style="margin-top: 3rem;">
       <div class="col-sm-4">
 
-          <div class="card slideUp">
+          <div class="card slideUp skill-card">
               <h5 class="card-header text-center"><img src="assets/img/badget/globo 1.png"></h5>
               <div class="card-body">
-                  <h5 class="card-title">Web (UX /UI)</h5>
+                  <h5 class="card-title" style="text-align: center;">Web (UX /UI)</h5>
                   <p class="card-text">
                     <span>Diseñar páginas web, aplicaciones y </span>
                     <span>experiencias digitales, intuiticas para </span>
@@ -150,10 +163,12 @@
       </div>
       <div class="col-sm-4">
 
-          <div class="card slideUp">
-              <h5 class="card-header text-center"><img src="assets/img/badget/Vector.png"></h5>
+          <div class="card slideUp skill-card">
+              <h5 class="card-header text-center">
+                <img src="assets/img/badget/Vector.png" style="display: block; margin: 0 auto;">
+              </h5>
               <div class="card-body">
-                  <h5 class="card-title">Editorial Design</h5>
+                  <h5 class="card-title" style="text-align: center;">Editorial Design</h5>
                   <p class="card-text">
                     <span>E-books, brouchures, catálogos</span>
                     <span>infografias, folletos y presentaciones</span>
@@ -164,10 +179,10 @@
       </div>
       <div class="col-sm-4">
 
-          <div class="card slideUp">
+          <div class="card slideUp skill-card">
               <h5 class="card-header text-center"><img src="assets/img/badget/row.png"></h5>
               <div class="card-body">
-                  <h5 class="card-title">Motion Graphic</h5>
+                  <h5 class="card-title" style="text-align: center;">Motion Graphic</h5>
                   <p class="card-text">
                     <span>Animaciones, diseño de interfaces</span>
                     <span>Interactivas, integración de contenido</span>
@@ -180,17 +195,17 @@
   </div>
 </section>
   <!--                                                    FIN DE LA SECCION DE HABILIDADES                      -->
-  <div style="height: 100px;"></div>
+  <div style="height: 128px;"></div>
   <h2 class="custom-header-3">Sobre mí</h2>      
-  <div class="header-shadow"><span>Sobre mí</span></div>
-  <div class="container skills-container" data-aos="fade-up" id="skills-section">
+  <div class="header-shadow" style="z-index: 0;"><span>Sobre mí</span></div>  
+  <div class="container skills-container" data-aos="fade-up" id="skills-section" style="margin-top: 3rem;">
     <div class="row skill-row">
       <div class="col-5">
         <div class="row progress-label">
             <div class="col-10"><span class="progress-label">Detallista</span></div>
-            <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-one" data-percentage="90">0%</span></div>
+            <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-one" data-percentage="100">0%</span></div>
         </div> 
-        <div class="progressbar" data-percentage="90%"></div>                
+        <div class="progressbar" data-percentage="100%"></div>                
             
             
       </div>
@@ -208,17 +223,17 @@
         <div class="col-5">
           <div class="row progress-label">
               <div class="col-10"><span class="progress-label">Pixel perfect</span></div>
-              <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-three" data-percentage="80">0%</span></div>
+              <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-three" data-percentage="100">0%</span></div>
           </div> 
-          <div class="progressbar" data-percentage="80%"></div>                                  
+          <div class="progressbar" data-percentage="100%"></div>                                  
         </div>
         <div class="col-2"></div>
         <div class="col-5">
           <div class="row progress-label">
               <div class="col-10"><span class="progress-label">Capacidad de organización</span></div>
-              <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-four" data-percentage="40">0%</span></div>
+              <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-four" data-percentage="85">0%</span></div>
           </div> 
-          <div class="progressbar" data-percentage="40%"></div>
+          <div class="progressbar" data-percentage="85%"></div>
         </div>
         </div><!-- FIN DE SKILL ROW-->
 
@@ -226,27 +241,27 @@
           <div class="col-5">
             <div class="row progress-label">
                 <div class="col-10"><span class="progress-label">Investigación</span></div>
-                <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-five" data-percentage="50">0%</span></div>
+                <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-five" data-percentage="85">0%</span></div>
             </div> 
-            <div class="progressbar" data-percentage="50%"></div>           
+            <div class="progressbar" data-percentage="85%"></div>           
           </div>
           <div class="col-2"></div>
           <div class="col-5">
             <div class="row progress-label">
                 <div class="col-10"><span class="progress-label">Observadora</span></div>
-                <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-six" data-percentage="90">0%</span></div>
+                <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-six" data-percentage="100">0%</span></div>
             </div> 
-            <div class="progressbar" data-percentage="90%"></div>
+            <div class="progressbar" data-percentage="100%"></div>
             </div>
           </div><!-- FIN DE SKILL ROW-->
 
           <div class="row skill-row">
             <div class="col-5">
               <div class="row progress-label">
-                  <div class="col-10"><span class="progress-label">Recursiva</span></div>
-                  <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-seven" data-percentage="20">0%</span></div>
+                  <div class="col-10"><span class="progress-label">Resolutiva</span></div>
+                  <div class="col-2" style="text-align: end;"><span class="text-end animate__fadeIn" id="progress-label-seven" data-percentage="100">0%</span></div>
               </div> 
-              <div class="progressbar" data-percentage="20%"></div>
+              <div class="progressbar" data-percentage="100%"></div>
           </div><!-- FIN DE SKILL ROW-->
           <div class="col-2"></div>
             <div class="col-5">
@@ -295,88 +310,88 @@
 
   <div class="row row-cols-1 row-cols-md-3 g-4">
 
-    <div class="col" data-groups='["category_all", "category_design"]'>
+    <div class="col" data-groups='["category_all", "category_design"]' style="display: block;width: 400px; margin-left: 38px; margin-bottom: 1rem;">
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">American Express</h5>
-          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
-          <img src="assets/img/portfoloio-american-expres/01_miniatura_trabajo 1.png" class="card-img-top" alt="American Express">
+          <div class="more-btn-container"><a class="more-btn" href="porfolio/americanExpres/index.html">Saber más</a></div>
+          <img src="assets/img/portfolio-american-expres/01_miniatura_trabajo.png" class="card-img-top" alt="American Express">
         </div>
       </div>
     </div><!--Fin de american express-->
-    <div class="col" data-groups='["category_all", "category_branding"]'>
+    <div class="col" data-groups='["category_all", "category_branding"]' style="display: block;width: 400px;margin-left: 38px; margin-bottom: 1rem;">
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Immune</h5>
-          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <div class="more-btn-container"><a class="more-btn" href="porfolio/immune/index.html">Saber más</a></div>
           <img src="assets/img/portfolio-immune/01_miniatura_trabajo 2.png" class="card-img-top" alt="...">
         </div>
       </div>
     </div><!--Fin de american Immune-->
 
-    <div class="col" data-groups='["category_all", "category_branding"]''> 
+    <div class="col" data-groups='["category_all", "category_branding"]'' style="display: block;width: 400px;margin-left: 38px; margin-bottom: 1rem;"> 
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">IE Business School</h5>
-          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
-          <img src="assets/img/portfolio-ieb/01_miniatura_trabajo 3.png" class="card-img-top" alt="...">
+          <div class="more-btn-container"><a class="more-btn" href="porfolio/ie/index.html">Saber más</a></div>
+          <img src="assets/img/portfolio-ie/01_miniatura_trabajo 3.png" class="card-img-top" alt="...">
         </div>
       </div>
     </div><!--Fin de IEB-->
 
-    <div class="col" data-groups='["category_all", "category_branding", "category_design", "category_ux"]'>
+    <div class="col" data-groups='["category_all", "category_branding", "category_design", "category_ux"]' style="display: block;width: 400px;margin-left: 38px; margin-bottom: 1rem;">
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Padelmba</h5>
-          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <div class="more-btn-container"><a class="more-btn" href="porfolio/padelmba/index.html">Saber más</a></div>
           <img src="assets/img/portfolio-padelmba/01_miniatura_trabajo 4.png" class="card-img-top" alt="...">
         </div>
       </div>
     </div><!--Fin de padelmba-->
-    <div class="col" data-groups='["category_all", "category_branding", "category_design", "category_ux"]'>
+    <div class="col" data-groups='["category_all", "category_branding", "category_design", "category_ux"]' style="display: block;width: 400px;margin-left: 38px; margin-bottom: 1rem;">
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Pictet</h5>
-          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <div class="more-btn-container"><a class="more-btn" href="porfolio/pictet/index.html">Saber más</a></div>
           <img src="assets/img/portfolio-pictet/01_miniatura_trabajo 6.png" class="card-img-top" alt="...">
         </div>
       </div>
     </div><!--Fin de american Pictet-->
 
-    <div class="col" data-groups='["category_all", "category_branding", "category_design", "category_ux"]'>
+    <div class="col" data-groups='["category_all", "category_branding", "category_design", "category_ux"]' style="display: block;width: 400px;margin-left: 38px; margin-bottom: 1rem;">
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
-          <h5 class="card-title">Motoluxe</h5>
-          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
-          <img src="assets/img/portfolio-motoluxe/01_miniatura_trabajo 5.png" class="card-img-top" alt="...">
+          <h5 class="card-title">Atenzia</h5>
+          <div class="more-btn-container"><a class="more-btn" href="porfolio/atenzia/index.html">Saber más</a></div>
+          <img src="assets/img/portfolio-atenzia/atenzia.jpg" class="card-img-top" alt="...">
         </div>
       </div>
     </div><!--Fin de motoluxe-->
 
-    <div class="col" data-groups='["category_all", "category_ux"]'>
+    <div class="col" data-groups='["category_all", "category_ux"]' style="display: block;width: 400px;margin-left: 38px; margin-bottom: 1rem;">
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Sony Pictures</h5>
-          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <div class="more-btn-container"><a class="more-btn" href="porfolio/sony/index.html">Saber más</a></div>
           <img src="assets/img/portfolio-sony/01_miniatura_trabajo 7.png" class="card-img-top" alt="...">
         </div>
       </div>
     </div><!--Fin de Sony-->
-    <div class="col" data-groups='["category_all", "category_branding"]'>
+    <div class="col" data-groups='["category_all", "category_branding"]' style="display: block;width: 400px;margin-left: 38px; margin-bottom: 1rem;">
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">Ducati</h5>
-          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <div class="more-btn-container"><a class="more-btn" href="porfolio/ducati/index.html">Saber más</a></div>
           <img src="assets/img/portfolio-ducati/01_miniatura_trabajo 9.png" class="card-img-top" alt="...">
         </div>
       </div>
     </div><!--Fin de american Ducati-->
 
-    <div class="col" data-groups='["category_all", "category_ux"]'>
+    <div class="col" data-groups='["category_all", "category_ux"]' style="display: block;width: 400px;margin-left: 38px; margin-bottom: 1rem;">
       <div class="card project-card animate__fadeIn">
         <div class="card-body">
           <h5 class="card-title">MM Academy</h5>
-          <div class="more-btn-container"><a class="more-btn">Saber más</a></div>
+          <div class="more-btn-container"><a class="more-btn" href="porfolio/mmAcademy/index.html">Saber más</a></div>
           <img src="assets/img/portfolio-mmacademy/01_miniatura_trabajo 8.png" class="card-img-top" alt="...">
         </div>
       </div>
@@ -391,22 +406,21 @@
     
     <div class="col-sm-3">
       <h3>Conóceme un poco en las redes sociales</h3>
-      <p>©2025, All rights reserved</p>
-      <p>support@sarahwitheh.com</p>
+      <p style="margin-top: 2rem;">©2025, All rights reserved</p>
+      <p style="margin-top: -.5rem;">support@sarahwitheh.com</p>
       <div class="social-menu">
-        <li><a href=""><img src="assets/img/social/social_Be.png"/></a></li>
-        <li><a href=""><img src="assets/img/social/social_instagram.png"/></a></li>
-        <li><a href=""><img src="assets/img/social/social_linkedn.png"/></a></li>
-
+        <li><a href="https://www.behance.net/sarahwitheh#" target="_blank"><img src="assets/img/social/social_Be.png"/></a></li>
+        <li><a href="https://www.instagram.com/sarah.s.witheh/" target="_blank"><img src="assets/img/social/social_Instagram.png"/></a></li>
+        <li><a href="https://www.linkedin.com/in/sarah-schaeflé-062235184/" target="_blank"><img src="assets/img/social/social_linkedn.png"/></a></li>
       </div>
     </div>
     <div class="col-sm-3"></div>
-    <div class="col-sm-3">
+    <div class="col-sm-3" style="padding-top: 14px;">
       <a href="#projects-container">PROYECTOS</a>
       <a href="#competence-section">HABILIDADES</a>
     </div>
-    <div class="col-sm-3">
-      <a href="">CONTACTO</a>
+    <div class="col-sm-3" style="padding-top: 14px;">
+      <a href="contact.html">CONTACTO</a>
       <a href="#skills-section">SOBRE MI</a>
     </div>
 
@@ -418,7 +432,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="./assets/js/textEfects.js"></script>
-    <script src="./assets/js/bird.js"></script>
+    
     <script src="./assets/js/filters.js"></script>
     <script>
       //let exp = calcularExperiencia('2017-02-28');
@@ -474,5 +488,7 @@
         observerSection.observe(competenceContainer);
         observerSection.observe(projectsContainer);
     </script>
+    <script src="./assets/js/birdAnim.js"></script>
+    <script src="./assets/js/more-btn-transition.js"></script>
   </body>
 </html>

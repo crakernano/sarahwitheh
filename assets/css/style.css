@@ -56,32 +56,31 @@ nav{
 .nav-link{
     font-family: "Inter";
     font-size: 16px !important;
-    font-weight: 600 !important;
+    font-weight: 750 !important;
     line-height: 16px;
-    letter-spacing: 0%;
+    letter-spacing: 4%;
     text-transform: uppercase;
     color: #C30001 !important;
 }
 
 .custom-button{
     font-family: 'Inter';
-    font-weight: 700;
+    font-weight: 750;
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0%;
+    letter-spacing: 4%;
     text-transform: uppercase;
     color: #C30001;
     border-radius: 100px;
     border: 1px #C30001 solid;
     padding: 15px 40px 15px 40px;
     gap: 10px;
-    background-color: #FFF;
+    background-color: #F0F0F0;
 }
 
 .button-red:hover{
     color: #C30001;   
-    background-color: #FFF;
-    margin-right: 25px;
+    background-color: #FFF;    
 }
 
 .button-red{
@@ -96,6 +95,11 @@ nav{
 
 .navbar-nav{
     margin-left: 25%;
+}
+
+.navbar-nav a{
+    letter-spacing: 4%;
+    font-weight: 750;
 }
 
 .call-action-section{
@@ -143,7 +147,7 @@ nav{
 }
 
 .custom-text-block{
-    margin-top: 8rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
     font-family: "Inter";
     font-weight: 500;
@@ -232,6 +236,9 @@ p{
 h5.card-header{
     background-color: transparent !important;
     border-bottom: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h5.card-header img{
@@ -242,12 +249,13 @@ h5.card-header img{
 
 h5.card-title{
     font-family: 'Inter';
-    text-align: center;
+    text-align: left;
     font-weight: 700;
     font-size: 32px;
     line-height: 36px;
     letter-spacing: 2%;
     color: #2B2B2B;
+    margin-left:16px
 }
 
 p.card-text{
@@ -319,13 +327,13 @@ p.card-text{
     margin-bottom: 3rem;
 }
 
-/* .progress-label{
-    margin-bottom: 1rem;;
-} */
-
-.text-end{
-    opacity: 0;
+.progress-label{
+    margin-bottom: 2rem;
 }
+
+/* .text-end{
+    opacity: 0;
+} */
 
 .progress-bar{
     position: relative;
@@ -368,13 +376,14 @@ p.card-text{
   }
 
 .portfolio-filters {
-    margin-bottom: 30px;  
-    text-align: center;  
+    margin-top: 3rem; 
+    margin-bottom: 7rem;
+    text-align: center; 
   }
   
   .portfolio-filters li {
     display: inline-block;    
-    margin-right: 15px;
+    margin-right: 24px;
     /* font-size: 13px;
     opacity: 0.7; */
   }
@@ -387,19 +396,24 @@ p.card-text{
   .portfolio-filters li a {
     font-family: 'Inter';
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 750;
     /*color: #2B2B2B;*/
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0%;
+    letter-spacing: 4%;
     cursor: pointer;
-    border: 1px solid #2B2B2B;
+    border: 1px #C30001 solid;
     padding: 16px 40px 16px 40px;
     gap: 10px;
     border-radius: 100px;
     text-transform: uppercase;
     margin-right: 0px;
     
+  }
+
+  .portfolio-filters li a:hover {
+    color: #C30001;   
+    background-color: rgba(195, 0, 1, .1)
   }
 
   .card.project-card{
@@ -414,18 +428,21 @@ p.card-text{
     text-align: start;
     padding-bottom: 1px;
     padding-left: 10px;
-    animation: animate__fadeIn;
-    animation-duration: 2s;
+    /*animation: animate__fadeIn;*/
+    /*animation-duration: 2s;*/
 }
 
 .card.project-card .card-body{
-    padding-right: 0px !important;    
+    padding-right: 0px !important;
+    padding-top: 3rem;
   }
 
 .card.project-card img{
-border-bottom-right-radius: 30px;
-margin-bottom: -16px;
-margin-top: 1rem;
+    border-bottom-right-radius: 30px;
+    margin-bottom: -16px;
+    margin-top: 1rem;
+    width: 333px;
+    margin-left:17px;
 }
 
 .more-btn::before{
@@ -441,8 +458,11 @@ margin-top: 1rem;
     width: 36px;
     display: inline-flex;
     color: #2B2B2B;
-    padding: 10px;
+    padding: 9px;
     margin-right: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: scale(1);
 }
 
 .more-btn{
@@ -454,49 +474,225 @@ margin-top: 1rem;
     text-decoration: none;
     color: #2B2B2B;
     margin-bottom: 2rem;
-    height: 36px;
-    transition: width 2s ease;
+    height: 40px;
+    width: 150px;
+    border: transparent solid 1px;
+    border-radius: 600px;
+    padding: 0;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.more-btn:hover::before {
-    content: none;
-    display: none;
+.more-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #C30001;
+    border-radius: 600px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.more-btn:hover::after {
+    transform: scaleX(1);
+}
+
+/* Transición suave de salida - Solo para la salida del hover */
+.more-btn.smooth-exit {
+    transition: all 0.4s ease !important;
+}
+
+.more-btn.smooth-exit::after {
+    transform: scaleX(0) !important;
+    transform-origin: right !important;
+    transition: transform 0.4s ease !important;
+}
+
+/* Modificar el comportamiento del ::after cuando tiene smooth-exit */
+.more-btn.smooth-exit::after {
+    background-color: #C30001 !important;
+    transform: scaleX(1) !important;  /* Mantener expandido inicialmente */
+    transform-origin: right !important;
+    transition: transform 0.4s ease !important;
+}
+
+/* Después de un momento, contraer desde la derecha - MÁXIMA ESPECIFICIDAD */
+.more-btn.more-btn.smooth-exit.contracting::after,
+.more-btn.more-btn.smooth-exit.contracting:hover::after,
+.more-btn.more-btn.smooth-exit.contracting:not(:hover)::after {
+    transform: scaleX(0) !important;
+    background-color: lime !important;
+    transform-origin: right !important;
+    transition: transform 0.4s ease !important;
+    z-index: -1 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 600px !important;
+    content: '' !important;
+}
+
+/* PRUEBA DIRECTA: Si tiene smooth-exit, hacer el botón COMPLETAMENTE VERDE SIEMPRE */
+.more-btn.smooth-exit {
+    color: #2B2B2B !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    transition: all 0.4s ease !important;
+    /* Remover el fondo verde del botón - solo queremos el pseudo-elemento */
 }
 
 .more-btn:hover{
     font-family: 'Inter';
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0%;
-    text-transform: uppercase;
-    border: #2B2B2B solid 1px;
+    border: none;
     border-radius: 600px;
-    padding: 10px;
-    background-color: #C30001;
+    padding: 0 50px 0 15px;
+    padding-left: 27px;
+    background-color: transparent;
     color: #FFF;
-    height: 36px;
+    height: 40px;
     margin-bottom: 2rem;
-    transition: width 20s ease;
+    margin-left: .1rem;
+    width: 150px;
+    z-index: 1;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.more-btn:hover::after{
-    content: " 🡥";
-    -webkit-transition: opacity 1.2s ease;
-    -moz-transition: opacity 1.2s ease;
-    -ms-transition: opacity 1.2s ease;
-    -o-transition: opacity 1.2s ease;
-    transition:  opacity 1.2s ease-out;
+/* REGLA HOVER ::after REMOVIDA - Ahora controlado por JavaScript */
+
+.more-btn:hover {
+    position: relative;
+}
+
+/* La flecha original se desvanece cuando se hace hover */
+.more-btn:hover::before {
+    content: '🡥';
+    position: absolute;
+    top: 30%;
+    left: 115px;
+    color: #FFF;
+    z-index: 2;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    font-family: 'Inter';
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slideInFromLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Social icons in contact page */
+.social-menu-contact{
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.social-menu-contact li{
+    list-style: none;
+}
+.social-menu-contact img{
+    width: 36px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 767px){
+    .social-menu-contact{
+        position: static;
+        margin-top: 1rem;
+        justify-content: flex-start;
+    }
+}
+
+.more-btn:hover{
+    font-family: 'Inter';
+    border: none;
+    border-radius: 600px;
+    padding: 0 50px 0 15px;
+    padding-left: 27px;
+    background-color: transparent;
+    color: #FFF;
+    height: 40px;
+    margin-bottom: 2rem;
+    margin-left: .1rem;
+    width: 150px;
+    z-index: 1;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Animación para que la flecha aparezca desde la izquierda */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* REGLAS PARA SALIDA SUAVE - COMPATIBLES CON EL SISTEMA EXISTENTE */
+.more-btn.smooth-exit {
+    color: #2B2B2B !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    transition: all 0.4s ease !important;
+}
+
+.more-btn.smooth-exit::before {
+    content: "🡢" !important;
+    position: static !important;
+    color: #2B2B2B !important;
+    border: #2B2B2B solid 1px !important;
+    border-radius: 600px !important;
+    height: 36px !important;
+    width: 36px !important;
+    padding: 9px !important;
+    margin: 0 10px 0 0 !important;
+    display: inline-flex !important;
+    background-color: transparent !important;
+    animation: none !important;
+    transition: all 0.4s ease !important;
 }
 
 .more-btn-container{
     height: 40px;
+    margin-top:1rem;
+    margin-bottom: 2rem;
+    margin-left: 16px;
 }
 
 footer{
     height: 440px;
     background-color: #C30001;
-    padding: 5% 10% 5% 10%;
+    padding: 2% 10% 5% 10%;
 }
 
 footer img{
@@ -515,7 +711,7 @@ footer h3{
     font-family: 'Inter';
     color: #FFF;
     font-weight: 700;
-    font-size: 34;
+    font-size: 34px;
     line-height: 40px;
     letter-spacing: 3%;
 }
@@ -531,10 +727,10 @@ footer p{
 
 footer a{
     font-family: 'Inter';
-    font-weight: 900;
+    font-weight: 750;
     font-size: 16px;
     line-height: 16px;
-    letter-spacing: 0%;
+    letter-spacing: 4%;
     text-transform: uppercase;
     color: #FFF;
     text-decoration: none;
@@ -575,4 +771,70 @@ footer a::after{
 
 .portfolio-filters li a.active{
     color: #C30001;
+}
+
+/* .bird {
+  width: 200px;
+  height: 200px;
+  background: url("../img/spritesheet.png") no-repeat;
+  background-size: 1200px 400px; 
+  animation: fly 1s steps(6) infinite;
+}*/
+/*
+@keyframes fly {
+  from { background-position: 0 0; }
+  to   { background-position: -1200px 0; }
+} */
+
+/*
+.bird {
+  width: 200px;   
+  height: 200px; 
+  background: url("../img/bird.png") no-repeat;
+  background-size: 1200px 200px; 
+  animation: flap 1s steps(6) infinite;
+}
+
+@keyframes flap {
+  0%   { background-position:    0    0; }
+  16%  { background-position: -200px  0; }
+  33%  { background-position: -400px  0; }
+  50%  { background-position:    0  -200px; }
+  66%  { background-position: -200px -200px; }
+  83%  { background-position: -400px -200px; }
+  100% { background-position:    0    0; }
+}
+
+*/
+
+.bird {
+  width: 200px;   /* ancho de un frame */
+  height: 200px;  /* alto de un frame */
+  background: url("../img/bird.png") no-repeat;
+  background-size: 1000px 200px; /* 6 frames * 200px de ancho */
+  animation: flap 1s steps(5) infinite;
+}
+
+@keyframes flap {
+  from { background-position:    0    0; }
+  to   { background-position: -1000px 0; }
+}
+
+#bird-anim {
+  width: 200px;
+  height: 200px;
+  object-fit: contain; /* o 'cover' si quieres recortar */
+  background: transparent;
+  /*display: block;*/
+  /*margin: 0 auto;*/
+  opacity: .3;
+  float: right;
+  margin-right: 50px;
+}
+
+.skill-card{
+    background-color: transparent !important;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    min-height: 284px;
 }
