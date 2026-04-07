@@ -838,3 +838,65 @@ footer a::after{
     padding-top: 1.5rem;
     min-height: 284px;
 }
+
+/* ==========================
+     Reglas responsivas (media queries)
+     Añadidas para mejorar visualización mobile
+     ========================== */
+
+/* Helpers: asegurar elementos fluidos */
+.img-fluid, img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ajustes para pantallas hasta 1200px */
+@media (max-width: 1200px) {
+    .custom-title { font-size: 5.5rem; line-height: 1.05; }
+    .navbar-nav { margin-left: 10%; }
+    .portfolio-filters li a { padding: 12px 28px; }
+    .card.project-card img { width: 280px; }
+}
+
+/* Ajustes para tablets y pantallas medianas */
+@media (max-width: 992px) {
+    .custom-title { font-size: 4.5rem; }
+    .custom-header-2 { font-size: 40px; }
+    .portfolio-filters li a { padding: 12px 24px; font-size: 14px; }
+    .card.project-card img { width: 240px; margin-left: 0; }
+}
+
+/* Modo mobile: <= 768px */
+@media (max-width: 768px) {
+    .container, .art-director-section, .impact-section { padding-left: 1rem; padding-right: 1rem; }
+    .navbar-nav { margin-left: 0; text-align: center; }
+    nav { padding-bottom: 1.5rem; margin-bottom: 2rem; height: auto; }
+    .navbar-brand, .nav-link { display: inline-block; font-size: 14px; }
+    .custom-title { font-size: 2.8rem; line-height: 1.1; }
+    .custom-header-2, .custom-header-3 { font-size: 28px; line-height: 1.15; text-align: center; }
+    .custom-text-block { width: 100%; font-size: 15px; }
+    .art-director-section, .impact-section { background-position: center; background-size: cover; padding: 2rem 1rem; }
+    .card.project-card { border-radius: 16px; padding: 1rem; }
+    .card.project-card img { width: 100%; max-width: 100%; margin: 0 0 1rem 0; border-radius: 12px; }
+    .portfolio-filters li a { padding: 10px 18px; font-size: 13px; margin-right: 8px; display: inline-block; }
+    .more-btn { width: auto; padding-left: 10px; }
+    .header-shadow { display: none; }
+    #background-competence-img { display: none; }
+    footer { padding: 4% 6% 6% 6%; height: auto; }
+}
+
+/* Ajustes pequeños para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    html { font-size: 14px; }
+    .custom-title { font-size: 2rem; line-height: 1.15; }
+    .custom-text-block { font-size: 14px; width: 100%; }
+    .nav-link { font-size: 13px; }
+    .custom-subtitle { font-size: 16px; line-height: 1.2; }
+    .social-menu img, .social-menu-contact img { width: 28px; height: auto; }
+    .more-btn::before { display: none; }
+    .portfolio-filters { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+}
+
+/* Clase utilitaria para ocultar elementos en móviles */
+.hide-mobile { display: none !important; }
