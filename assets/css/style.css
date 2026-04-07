@@ -599,6 +599,34 @@ p.card-text{
     animation: slideInFromLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
+/* Social icons in contact page */
+.social-menu-contact{
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.social-menu-contact li{
+    list-style: none;
+}
+.social-menu-contact img{
+    width: 36px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 767px){
+    .social-menu-contact{
+        position: static;
+        margin-top: 1rem;
+        justify-content: flex-start;
+    }
+}
+
 .more-btn:hover{
     font-family: 'Inter';
     border: none;
