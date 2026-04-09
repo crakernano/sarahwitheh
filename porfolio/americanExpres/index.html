@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <!-- <script src="../assets/js/infinity_carrusel.js"></script> -->
     
     
@@ -109,7 +110,7 @@
           <div class="col-12">
             <h2 class="project-detail-title">La idea</h2>
             <p style="margin-top: 3rem;">El proyecto surge de la necesidad de renovar su ecosistema digital, optimizando su presencia
-            redes sociales y perfil corporativo en LinkedIn. Desde el inicio, se buscaba comprender cómo la
+            redes sociales y perfil corporativo en Instragram. Desde el inicio, se buscaba comprender cómo la
             marca comunica su valor, inspira confianza y conecta con su audiencia premium. Tras varias
             sesiones de trabajo conjunto, definimos un diseño integral que potencia la identidad visual de
             American Express, unificando coherencia, elegancia y funcionalidad en cada punto de contacto
@@ -274,7 +275,7 @@
         
         <div class="col-sm-3">
         <h3>Conóceme un poco en las redes sociales</h3>
-        <p style="margin-top: 2rem;">©2025, All rights reserved</p>
+        <p style="margin-top: 2rem;">&copy;<span id="year"></span>, All rights reserved</p>
         <p style="margin-top: -.5rem;">support@sarahwitheh.com</p>
         <div class="social-menu">
             <li><a href="https://www.behance.net/sarahwitheh#" target="_blank"><img src="../../assets/img/social/social_Be.png"/></a></li>
@@ -298,5 +299,6 @@
 
     <!-- === Script === -->
     <script src="../assets/js/script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

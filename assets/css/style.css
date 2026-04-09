@@ -427,7 +427,7 @@ p.card-text{
     letter-spacing: -2%;
     line-height: 40px;
     text-align: start;
-    padding-bottom: 1px;
+    /* padding-bottom: 1px; */
     padding-left: 10px;
     /*animation: animate__fadeIn;*/
     /*animation-duration: 2s;*/

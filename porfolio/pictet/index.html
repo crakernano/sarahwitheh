@@ -67,11 +67,12 @@
           </div>
           <div class="col-2"></div>
           <div class="col-7">            
-            <p><b>Pictet</b> encarna una visión de la banca donde la tradición, la excelencia y la sostenibilidad se
+            <p style="text-align: justify;"><b>Pictet</b> encarna una visión de la banca donde la tradición, la excelencia y la sostenibilidad se
             armonizan. Más que una firma financiera, es un socio que acompaña a las familias y a las
             instituciones en la construcción de un legado duradero. En un mundo que demanda confianza
             y visión a largo plazo, <b>Pictet</b> se distingue por su independencia y su enfoque humano del
-            capital. A través de estrategias responsables, gestión artesanal y compromiso con el futuro, la
+            capital.<br> 
+            A través de estrategias responsables, gestión artesanal y compromiso con el futuro, la
             marca transforma la inversión en valor significativo. <b>Pictet</b>: preservando el mañana desde hoy.</p>
           </div>
         </div>
@@ -272,7 +273,7 @@
         
         <div class="col-sm-3">
         <h3>Conóceme un poco en las redes sociales</h3>
-        <p style="margin-top: 2rem;">©2025, All rights reserved</p>
+        <p style="margin-top: 2rem;">&copy;<span id="year"></span>, All rights reserved</p>
         <p style="margin-top: -.5rem;">support@sarahwitheh.com</p>
         <div class="social-menu">
             <li><a href="https://www.behance.net/sarahwitheh#" target="_blank"><img src="../../assets/img/social/social_Be.png"/></a></li>
@@ -296,5 +297,6 @@
 
     <!-- === Script === -->
     <script src="../assets/js/script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
