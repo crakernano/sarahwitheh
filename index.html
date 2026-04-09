@@ -406,7 +406,7 @@
     
     <div class="col-sm-3">
       <h3>Conóceme un poco en las redes sociales</h3>
-      <p style="margin-top: 2rem;">©2025, All rights reserved</p>
+      <p style="margin-top: 2rem;">&copy;<span id="year"></span>, All rights reserved</p>
       <p style="margin-top: -.5rem;">support@sarahwitheh.com</p>
       <div class="social-menu">
         <li><a href="https://www.behance.net/sarahwitheh#" target="_blank"><img src="assets/img/social/social_Be.png"/></a></li>
@@ -490,5 +490,8 @@
     </script>
     <script src="./assets/js/birdAnim.js"></script>
     <script src="./assets/js/more-btn-transition.js"></script>
+    
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
   </body>
 </html>
