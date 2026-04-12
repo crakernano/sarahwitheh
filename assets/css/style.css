@@ -84,6 +84,11 @@ nav{
     background-color: #FFF;    
 }
 
+.button-hover-black:hover{
+    color: #FFF;   
+    background-color: #2B2B2B;    
+}
+
 .button-red{
     background-color: #C30001;   
     color: #FFF;
