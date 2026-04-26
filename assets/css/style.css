@@ -753,23 +753,53 @@ footer a::after{
     margin-top: 2rem;
 }
 .social-menu li{
-    display: inline-block;
-    height: 41px;
-    width: 41px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
     background-color: #FFF;
-    border-radius: 100px;
+    border-radius: 50%;
     margin-right: 10px;
-    /*padding: 5px 5px 5px 5px;*/
+    padding: 0;
+    vertical-align: middle;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
 .social-menu img{
-    border-radius: 100px;
-    height: 22px;
-    width: 22px;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    display: block;
 }
 
 .social-menu a{
-    padding: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.social-menu img{
+    object-fit: contain;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+}
+
+/* Fallback: ensure list items align when parent has inline content */
+.social-menu{
+    display: inline-block;
 }
 .social-menu a::after{
     content: "";
