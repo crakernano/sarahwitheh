@@ -71,3 +71,10 @@
     border-radius: 50px;
     object-fit: contain;
 }
+
+@media (max-width: 767px){
+    .project-header-img img{height: auto;}
+    .sample-img, .img-outstanding{height: auto; margin-bottom: 1rem;}
+    .separador{height: 50px;}
+
+}

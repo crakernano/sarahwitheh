@@ -1,0 +1,65 @@
+[
+  {
+    "id": "americanExpres",
+    "title": "American Express",
+    "categories": ["category_all", "category_design"],
+    "img": "assets/img/portfolio-american-expres/01_miniatura_trabajo.png",
+    "href": "porfolio/americanExpres/index.html"
+  },
+  {
+    "id": "immune",
+    "title": "Immune",
+    "categories": ["category_all", "category_branding"],
+    "img": "assets/img/portfolio-immune/01_miniatura_trabajo 2.png",
+    "href": "porfolio/immune/index.html"
+  },
+  {
+    "id": "ie",
+    "title": "IE Business School",
+    "categories": ["category_all", "category_branding"],
+    "img": "assets/img/portfolio-ie/01_miniatura_trabajo 3.png",
+    "href": "porfolio/ie/index.html"
+  },
+  {
+    "id": "padelmba",
+    "title": "Padelmba",
+    "categories": ["category_all", "category_branding", "category_design", "category_ux"],
+    "img": "assets/img/portfolio-padelmba/01_miniatura_trabajo 4.png",
+    "href": "porfolio/padelmba/index.html"
+  },
+  {
+    "id": "pictet",
+    "title": "Pictet",
+    "categories": ["category_all", "category_branding", "category_design", "category_ux"],
+    "img": "assets/img/portfolio-pictet/01_miniatura_trabajo 6.png",
+    "href": "porfolio/pictet/index.html"
+  },
+  {
+    "id": "atenzia",
+    "title": "Atenzia",
+    "categories": ["category_all", "category_branding", "category_design", "category_ux"],
+    "img": "assets/img/portfolio-atenzia/atenzia.jpg",
+    "href": "porfolio/atenzia/index.html"
+  },
+  {
+    "id": "sony",
+    "title": "Sony Pictures",
+    "categories": ["category_all", "category_ux"],
+    "img": "assets/img/portfolio-sony/01_miniatura_trabajo 7.png",
+    "href": "porfolio/sony/index.html"
+  },
+  {
+    "id": "ducati",
+    "title": "Ducati",
+    "categories": ["category_all", "category_branding"],
+    "img": "assets/img/portfolio-ducati/01_miniatura_trabajo 9.png",
+    "href": "porfolio/ducati/index.html"
+  },
+  {
+    "id": "mmAcademy",
+    "title": "MM Academy",
+    "categories": ["category_all", "category_ux"],
+    "img": "assets/img/portfolio-mmacademy/01_miniatura_trabajo 8.png",
+    "href": "porfolio/mmAcademy/index.html"
+  }
+]
