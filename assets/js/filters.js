@@ -15,4 +15,11 @@ function fliterCategory(branding){
         article.style.display = "block";
       }
     });
+    // Emitir evento para listeners externos (p.ej. carrusel móvil)
+    try {
+      const selectedGroup = `category_${branding.target.id.split("-")[1]}`;
+      document.dispatchEvent(new CustomEvent('portfolio-filter-changed', { detail: { group: selectedGroup } }));
+    } catch (e) {
+      console.warn('Error dispatching portfolio-filter-changed', e);
+    }
   }
