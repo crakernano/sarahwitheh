@@ -13,7 +13,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     background-color: #F0F0F0 !important;
-    overflow: visible;
+    overflow-y: visible;
 }
 
 *, *::before, *::after {
@@ -30,6 +30,7 @@ html, body {
     overflow-x: hidden;
     padding-right: 7rem;
     padding-left: 5rem;
+    overflow-y: visible;
 }
 img, video, iframe {
     max-width: 100%;
@@ -170,14 +171,15 @@ nav{
     background-position-x: left;
     background-position-y: top;
     background-size: contain;
-    /*height: 658px;*/
+    height: 658px;
     width: 100%;
     max-width: 1554.76px;
-    margin-left: auto;
+    margin-left: 0px;
     margin-right: auto;
     box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
+    overflow-x: hidden;
 }
 #impact-block{ padding-left: 4.5rem;}
 #projects-container-mobile{display: none;}
@@ -191,8 +193,8 @@ nav{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     background-size: cover;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .custom-title {
     font-size: 2.5rem;
@@ -704,7 +706,7 @@ p.card-text{
     margin-left: 16px;
 }
 .portfolio-filters li{display: grid; margin-bottom: 1rem;}
-
+.stat-text{margin-left: 10px;}
 
 footer{
     height: 440px;
@@ -911,7 +913,7 @@ footer a::after{
     .response-section-image{display: block;}
     #impact-block{ padding-left: 0rem;}
     .custom-header-2{font-size:40px;line-height: 43px;}
-    .impact-section{background:none;}
+    .impact-section{background:none; margin-left: 5px !important;}
     .start-text{margin-left: 1rem;}
     .footer-desktop{ display: none; }
     .footer-mobile { 
@@ -943,3 +945,17 @@ footer a::after{
     }
 }
 /* FIN de los estilos mobile */
+
+/* Evitar overflow por los items de proyecto con estilos inline */
+#projects-items-wrapper{
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+#projects-items-wrapper .col{
+    width: auto !important;
+    max-width: 400px;
+    margin-left: 0 !important;
+    margin-bottom: 1rem !important;
+    box-sizing: border-box;
+}
