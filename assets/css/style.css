@@ -30,7 +30,7 @@ html, body {
     overflow-x: clip;
     padding-right: 7rem;
     padding-left: 5rem;
-    overflow-y: visible;
+    /*overflow-y: visible;*/
 }
 img, video, iframe {
     max-width: 100%;
@@ -172,7 +172,7 @@ nav{
     background-position-y: top;
     background-size: contain;
     /*height: 658px;*/
-    height: auto;
+    height: auto    ;
     width: 100%;
     max-width: 1554.76px;
     margin-left: 0px;
@@ -180,7 +180,8 @@ nav{
     box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
+    overflow-x: clip;
 }
 #impact-block{ padding-left: 4.5rem;}
 #projects-container-mobile{display: none;}
