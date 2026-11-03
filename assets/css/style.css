@@ -781,7 +781,8 @@ footer a::after{
 .social-menu{
     margin-top: 2rem;
 }
-.social-menu li{
+
+/* .social-menu li{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -795,9 +796,94 @@ footer a::after{
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    } */
+    
+    /*SOCIAL MENU*/
+    /* .social-menu ul {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        } */
+        
+
+.social-menu li{display: inline-flex;}
+.social-menu ul li {
+  list-style: none;
 }
 
-.social-menu img{
+.social-menu ul li a {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  /*line-height: 80px;*/
+  font-size: 35px;
+  margin: 0 10px;
+  /*display: block;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.social-menu ul li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+  display: block;
+  line-height: 1;
+}
+
+.social-menu ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.social-menu ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #C30001;
+  transition: .5s;
+  z-index: 2;
+}
+
+.social-menu ul li a:hover:before {
+  top: 0;
+}
+
+.social-menu ul li a::after {content: none;}
+
+/* .social-menu ul li:nth-child(1) a:before{
+  background: #3b5999;
+}
+
+.social-menu ul li:nth-child(2) a:before{
+  background: #55acee;
+}
+
+.social-menu ul li:nth-child(3) a:before {
+  background: #0077b5;
+}
+
+.social-menu ul li:nth-child(4) a:before {
+  background: #dd4b39;
+} */
+
+/*FIN SOCIAL MENU*/
+
+/* .social-menu img{
     border-radius: 50%;
     height: 28px;
     width: 28px;
@@ -826,13 +912,12 @@ footer a::after{
     height: 50px;
 }
 
-/* Fallback: ensure list items align when parent has inline content */
 .social-menu{
     display: inline-block;
 }
 .social-menu a::after{
     content: "";
-}
+} */
 
 .portfolio-filters li a.active{
     color: #C30001;
