@@ -44,7 +44,7 @@
             <div class="navbar-nav">
               <a class="nav-link" aria-current="page" href="#projects-container">Proyectos</a>
               <a class="nav-link" href="#competence-section">Habilidades</a>
-              <a class="nav-link" href="#skills-section">Sobre mi</a>
+              <a class="nav-link" href="#skills-section-anchor">Sobre mi</a>
             </div>
             <div class="call-action-section">
               <button class="custom-button button-white" onclick="window.location.href='contact.html';">¿HABLAMOS?  🡥</button>
@@ -525,16 +525,17 @@
                     case 'skills-section':
                       console.log("de skills-section")
                       //moveBird()
+                      animateProgressBar();
                       break;
                     case 'impact-section':
-                      let exp = calcularExperiencia('2016-02-28');
-                      number_counter(exp, 'experience-counter',400); 
+                      let exp = calcularExperiencia('2015-02-28');
+                      number_counter(exp, 'experience-counter',200); 
                       number_counter(85, 'brand-counter', 100);
                       break;
                     case 'competence-section':
                       //const num_progress_bar = ['two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
                       //num_progress_bar.forEach(numero => progressAnimate(110,numero,50));
-                      animateProgressBar();
+                      //animateProgressBar();
                       //animateLabelProgressBar();
                       break;
                     case 'projects-container':
