@@ -546,8 +546,10 @@
                       animateProgressBar();
                       break;
                     case 'impact-section':
-                      let exp = calcularExperiencia('2015-02-28');
-                      number_counter(exp, 'experience-counter',200); 
+                      observerSection.unobserve(entry.target);
+
+                      const exp = calcularExperiencia('2016-02-28');
+                      number_counter(exp, 'experience-counter', 200);
                       number_counter(85, 'brand-counter', 100);
                       break;
                     case 'competence-section':

@@ -306,6 +306,7 @@ nav{
     font-size: 64px;
     line-height: 75px;
     letter-spacing: -2%;
+    min-width: 120px;
 }
 
 p{
