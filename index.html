@@ -43,13 +43,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="#projects-container">Proyectos</a>
+              <a class="nav-link nav-item" aria-current="page" href="#projects-container">Proyectos</a>
               <a class="nav-link" href="#competence-section">Habilidades</a>
               <a class="nav-link" href="#skills-section-anchor">Sobre mi</a>
             </div>
             <div class="call-action-section">
               <!-- <button class="custom-button button-white" onclick="window.location.href='contact.html';">¿HABLAMOS?  🡥</button> -->
-              <button class="cta-button" onclick="window.location.href='contact.html';">¿HABLAMOS?  🡥</button>
+              <button class="custom-button button-white" onclick="window.location.href='contact.html';">¿HABLAMOS?  🡥</button>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
           <!-- <button class="custom-button button-red button-hover-black" onclick="window.location.href='#projects-container';">Portfolio</button> -->
           <!-- <button class="custom-button button-white" onclick="window.location.href='contact.html';">¿HABLAMOS?  🡥</button> -->
           <button class="cta-button dark" onclick="window.location.href='#projects-container';">Portfolio</button>
-          <button class="cta-button" onclick="window.location.href='contact.html';">¿HABLAMOS?  🡥</button>
+          <button class="custom-button button-white" onclick="window.location.href='contact.html';">¿HABLAMOS?  🡥</button>
         </div>
         </div>
       </div>
@@ -437,7 +437,7 @@
   <div class="row footer-container">    
     <div class="col-sm-3">
       <h3>Conóceme un poco en las redes sociales</h3>
-      <p style="margin-top: 2rem;">&copy;<span id="year"></span>, All rights reserved</p>
+      <p style="margin-top: 2rem;">&copy;<span id="year" class="year"></span>, All rights reserved</p>
       <p style="margin-top: -.5rem;">info@sarahwitheh.com</p>
       <div class="social-menu">        
         <ul>
@@ -462,11 +462,19 @@
 
 <!-- Footer para tablet -->
 <footer data-aos="fade-up" class="footer footer-tablet" role="contentinfo">
+  <div class="row footer-container">
+    <div class="col-sm-12">
+      <ul class="tablet-footer-nav-menu">
+        <li><a href="#projects-container">PROYECTOS</a></li>
+        <li><a href="#competence-section">HABILIDADES</a></li>
+        <li><a href="contact.html">CONTACTO</a></li>
+        <li><a href="#skills-section-anchor">SOBRE MI</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="row footer-container">    
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <h3>Conóceme un poco en las redes sociales</h3>
-      <p style="margin-top: 2rem;">&copy;<span id="year"></span>, All rights reserved</p>
-      <p style="margin-top: -.5rem;">info@sarahwitheh.com</p>
       <div class="social-menu">
         <ul>
           <li><a href="https://www.behance.net/sarahwitheh" target="_blank"><i class="fab fa-brands fa-behance icon"></i></a></li>
@@ -474,14 +482,8 @@
           <li><a href="https://www.linkedin.com/in/sarah-schaeflé-062235184/" target="_blank"><i class="fab fa-linkedin-in icon"></i></a></li>
         </ul>
       </div>
-    </div>
-    <div class="col-sm-6">
-      <ul style="list-style: none; text-align: end;">
-        <li><a href="#projects-container">PROYECTOS</a></li>
-        <li><a href="#competence-section">HABILIDADES</a></li>
-        <li><a href="contact.html">CONTACTO</a></li>
-        <li><a href="#skills-section-anchor">SOBRE MI</a></li>
-      </ul>
+      <p style="margin-top: 2rem;">&copy;<span id="year" class="year"></span>, All rights reserved</p>
+      <p style="margin-top: -.5rem;">info@sarahwitheh.com</p>
     </div>
   </div>
   </div>
@@ -508,7 +510,7 @@
           <li><a href="https://www.linkedin.com/in/sarah-schaeflé-062235184/" target="_blank"><i class="fab fa-linkedin-in icon"></i></a></li>
         </ul>
       </div>
-      <p style="margin-top: 2rem;">&copy;<span id="year"></span>, All rights reserved</p>
+      <p style="margin-top: 2rem;">&copy;<span id="year" class="year"></span>, All rights reserved</p>
       <p style="margin-top: -.5rem;">info@sarahwitheh.com</p>
 </footer>
 
@@ -580,5 +582,7 @@
     <script src="./assets/js/more-btn-transition.js"></script>
     
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>document.querySelectorAll(".year").forEach((element) => {element.textContent = new Date().getFullYear();});
+</script>
   </body>
 </html>
