@@ -64,6 +64,68 @@ nav{
     text-transform: uppercase;
     color: #C30001 !important;
 }
+.habilidades-box{margin-top: 3rem;}
+/* Boton CTA */
+
+.cta-button {
+    display: inline-block;
+    font-family: 'Inter';
+    font-weight: 750;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 4%;
+    text-transform: uppercase;
+    /*padding: .75rem 1.25rem;*/
+    border-radius: 10rem;
+    border: 1px #C30001 solid;
+    color: #C30001;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 15px 40px 15px 40px;
+    margin-right: 25px;
+}
+
+.cta-button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F0F0F0;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.cta-button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: color-mix(in srgb, #2B2B2B, black 15%);
+  transition: all .3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.cta-button.dark{color: #FFF;}
+.cta-button.dark::after {background-color: #2B2B2B;}
+.cta-button.dark::before {background-color: #C30001;}
+.cta-button:hover {color: #fff; border: 1px #2B2B2B solid;}
+.cta-button.dark:hover {
+  color: #fff;
+  border-color: #2B2B2B;
+}
+.cta-button:hover:before {width: 100%;}
+
+
+/* FIN BOTON CTA*/
 
 .custom-button{
     font-family: 'Inter';
@@ -919,9 +981,7 @@ footer a::after{
     content: "";
 } */
 
-.portfolio-filters li a.active{
-    color: #C30001;
-}
+.portfolio-filters li a.active{color: #C30001;}
 
 /* .bird {
   width: 200px;
@@ -993,7 +1053,7 @@ footer a::after{
     .navbar-toggler{border:none !important;}
     .call-action-section{display: none;}
     .navbar-collapse{justify-content: flex-end; background-color: #F0F0F0;}
-    .navbar{margin-bottom: 2rem;}
+    .navbar{margin-bottom: 2rem;}    
     #bird-anim{display: none;}
     .header-shadow{font-size: 60px;}
     .social-menu-contact{
@@ -1094,6 +1154,7 @@ footer a::after{
 }
 
 @media (min-width: 901px) and (max-width: 1100px) {
+    .custom-subtitle{font-size: 19px;}    
     .impact-section{background-size: 50%;}
     .custom-title {
         font-size: 72px;
@@ -1105,7 +1166,13 @@ footer a::after{
     .art-director-section {
         height: auto;
         min-height: 658px;
+        background-size: 60%;
     }
+
+    .cta-button{margin-right: 10px;}
+    .cta-button.dark{border-color: #2b2b2b;}
+    .special_number{min-width: 100px; font-size: 50px;}
+    .stat-text{font-size: 11px;}
 
     #projects-items-wrapper {
         display: grid;
@@ -1140,20 +1207,27 @@ footer a::after{
         max-width: none;
         margin: 0 !important;
     }
+    .custom-subtitle{font-size: 15px;}
+    #WIA-display{font-size: 3.5rem;}
     .art-director-section{background-image: none;}
+    p.card-text{font-size: 12px;}
     .custom-text-block{width: 100%;}
     .button-row{text-align: center;}
     #WIA-display{height: auto; min-height: 50px;}
+    #bird-anim{display: none;}
+    .habilidades-box{margin-top: 1rem;}
     .response-section-image{display: block;}
     .impact-section{background-image: none;}
     #impact-block{padding-left: 0px;}
+    html body div.container nav.navbar.navbar-expand-lg div.container-fluid div#navbarNavAltMarkup.navbar-collapse.collapse.show div.call-action-section button.cta-button{display: none;}
     #responsive-impact-image {
         display: block;
         width: min(100%, 590px);
         height: auto;
         margin: 1.5rem auto 0;
     }
-    h5.card-title{font-size: 19px;}
+    h5.card-title{font-size: 22px;}
+    .social-menu ul li a{height: 50px; width: 50px;}
     .card-text span{display: contents;}
     .portfolio-filters {
         display: grid;
