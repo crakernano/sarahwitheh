@@ -15,6 +15,11 @@ function fliterCategory(branding){
         article.style.display = "block";
       }
     });
+
+    requestAnimationFrame(() => {
+      AOS.refreshHard();
+      window.dispatchEvent(new Event("scroll"));
+    });
     // Emitir evento para listeners externos (p.ej. carrusel móvil)
     try {
       const selectedGroup = `category_${branding.target.id.split("-")[1]}`;

@@ -64,6 +64,7 @@ nav{
     text-transform: uppercase;
     color: #C30001 !important;
 }
+.nav-link:hover{color: #F00000 !important;}
 .habilidades-box{margin-top: 3rem;}
 /* Boton CTA */
 
@@ -81,7 +82,7 @@ nav{
     color: #C30001;
     text-transform: uppercase;
     font-size: 1rem;
-    letter-spacing: .15rem;
+    /*letter-spacing: .15rem;*/
     transition: all .3s;
     position: relative;
     overflow: hidden;
@@ -114,7 +115,8 @@ nav{
   border-radius: 10rem;
   z-index: -1;
 }
-.cta-button.dark{color: #FFF;}
+
+.cta-button.dark{color: #FFF; border: 1px #2b2b2b solid;}
 .cta-button.dark::after {background-color: #2B2B2B;}
 .cta-button.dark::before {background-color: #C30001;}
 .cta-button:hover {color: #fff; border: 1px #2B2B2B solid;}
@@ -838,8 +840,16 @@ footer a{
 
 footer a::after{
     content: " 🡥";
+    margin-left: 0.5em;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
+footer a:hover::after {
+    /*color: blue; */
+    transform: translate(10px);
+    /*transform: rotateX(190deg);*/
+}
 
 .social-menu{
     margin-top: 2rem;
@@ -877,8 +887,10 @@ footer a::after{
 }
 
 .social-menu ul li a {
-  width: 80px;
-  height: 80px;
+  /*width: 80px;
+  height: 80px;*/
+  width: 60px;
+  height: 60px;
   background-color: #fff;
   text-align: center;
   /*line-height: 80px;*/
@@ -1046,8 +1058,8 @@ footer a::after{
 .skill-card{
     background-color: transparent !important;
     padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
-    min-height: 284px;
+    /*padding-top: 1.5rem;*/
+    min-height: 2px;
 }
 @media (max-width: 767px){
     #projects-container-mobile{display: block;}
@@ -1076,34 +1088,37 @@ footer a::after{
     .custom-header-2{font-size:40px;line-height: 43px;}
     .impact-section{background:none; margin-left: 5px !important;}
     .start-text{margin-left: 1rem;}
+    .stat-text{margin-left: 30px;}
+    h5.card-title{font-size: 24px;}
     .footer-desktop{ display: none; }
     .footer-tablet{display: none;}
     .footer-mobile { 
-    display: block;
-    height: auto;
-    padding: 2rem 1rem;}
+        display: block;
+        height: auto;
+        padding: 2rem 1rem;
+    }
     .footer-mobile a{ letter-spacing: 0%; }
-
+    .skill-row{margin-bottom: 0px;}
     .social-menu li{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px !important;
-    width: 30px !important;
-    background-color: #FFF;
-    border-radius: 50%;
-    margin-right: 10px;
-    padding: 0;
-    vertical-align: middle;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px !important;
+        width: 30px !important;
+        background-color: #FFF;
+        border-radius: 50%;
+        margin-right: 10px;
+        padding: 0;
+        vertical-align: middle;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
     }
     .social-menu img{
-    border-radius: 50%;
-    height: 18px;
-    width: 18px;
-    display: block;
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        display: block;
     }
 }
 /* FIN de los estilos mobile */
@@ -1171,7 +1186,7 @@ footer a::after{
     }
 
     .cta-button{margin-right: 10px;}
-    .cta-button.dark{border-color: #2b2b2b;}
+    button.cta-button.dark{border-color: 1px #2b2b2b solid;}    
     .special_number{min-width: 100px; font-size: 50px;}
     .stat-text{font-size: 11px;}
 
@@ -1212,6 +1227,7 @@ footer a::after{
     #WIA-display{font-size: 3.5rem;}
     .art-director-section{background-image: none;}
     p.card-text{font-size: 12px;}
+    
     .custom-text-block{width: 100%;}
     .button-row{text-align: center;}
     #WIA-display{height: auto; min-height: 50px;}
@@ -1227,7 +1243,7 @@ footer a::after{
         height: auto;
         margin: 1.5rem auto 0;
     }
-    h5.card-title{font-size: 22px;}
+    h5.card-title{font-size: 19px;}
     .social-menu ul li a{height: 50px; width: 50px;}
     .card-text span{display: contents;}
     .portfolio-filters {
@@ -1255,8 +1271,25 @@ footer a::after{
         line-height: 1.2;
     }
     .card.project-card img{margin-left: 0;}
+
+    .social-menu ul li a .icon{font-size: 25px;}
+
     .footer-desktop{display: none;}
     .footer-tablet{display: block;}
+    .tablet-footer-nav-menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+    .tablet-footer-nav-menu ul {list-style: none;}
+    .tablet-footer-nav-menu li {min-width: 0;}
+    .tablet-footer-nav-menu a {margin-bottom: 0;}
+    .social-menu ul{padding-left: 0rem;}
+    .social-menu{margin-left: 0px;}
     .navbar-collapse {
         flex-basis: 100%;
         justify-content: flex-end;
@@ -1289,18 +1322,26 @@ footer a::after{
 }
 
 @media (max-width: 767.98px) {
+    #art-director-section, #impact-section, #skills-section{padding:0px 20px 0px 20px}
+    .filtros{padding:0px 20px 0px 20px}
+
     .portfolio-filters {
-        display: grid;
+        /*display: grid;*/
+        display: block;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0.75rem;
         width: 100%;
         padding: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
-
+    .card.project-card img{width: 300px;}
+    .custom-button{padding: 15px 0 15px 0;}
     .portfolio-filters li {
         display: block;
         min-width: 0;
         margin: 0;
+        margin-bottom: 1rem;
         list-style: none;
     }
 
@@ -1314,5 +1355,22 @@ footer a::after{
         line-height: 1.2;
         text-align: center;
         white-space: normal;
+    }
+    .social-menu li{height: 60px !important; width: 60px !important;}
+    .social-menu ul li a .icon{font-size: 25px;}
+    nav.navbar {height: auto;}
+    nav.navbar > .container-fluid {flex-wrap: wrap;}
+
+    #navbarNavAltMarkup {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    #navbarNavAltMarkup .navbar-nav {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+        align-items: flex-end;
+        text-align: right;
     }
 }
