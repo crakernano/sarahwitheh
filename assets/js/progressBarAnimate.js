@@ -17,8 +17,6 @@ async function progressAnimate($percentMax = 100, progressBarNumber, delay=200){
     const labelsBar = document.querySelectorAll('.text-end');
     bars.forEach(async (bar, index) => {
       const percentage = bar.getAttribute('data-percentage');
-      const fill = bar.querySelector('::before'); // We'll simulate this below
-  
       // Create an inner element to animate
       const inner = document.createElement('div');
       inner.style.height = '100%';
@@ -30,10 +28,13 @@ async function progressAnimate($percentMax = 100, progressBarNumber, delay=200){
 
       // Set delay for each bar
       setTimeout(() => {
-        inner.style.width = percentage;
-        labelsBar[index].innerHTML = `${percentage}`;
-        image.classList.add("animate__fadeIn");
-        labelsBar[index].style.opacity = 1;
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            inner.style.width = percentage;
+            labelsBar[index].innerHTML = `${percentage}`;
+            labelsBar[index].style.opacity = 1;
+          });
+        });
       }, index * 500); // 500ms delay between bars
     }); 
   }
