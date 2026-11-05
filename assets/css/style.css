@@ -110,20 +110,19 @@ nav{
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: color-mix(in srgb, #2B2B2B, black 15%);
+  /*background-color: color-mix(in srgb, #2B2B2B, black 15%);*/
+  background-color: rgba(195, 0, 1, .1);
   transition: all .3s;
   border-radius: 10rem;
   z-index: -1;
 }
 
-.cta-button.dark{color: #FFF; border: 1px #2b2b2b solid;}
+.cta-button.dark{color: #FFF; border: 1px #2b2b2b solid; font-size: 14px;}
 .cta-button.dark::after {background-color: #2B2B2B;}
 .cta-button.dark::before {background-color: #C30001;}
-.cta-button:hover {color: #fff; border: 1px #2B2B2B solid;}
-.cta-button.dark:hover {
-  color: #fff;
-  border-color: #2B2B2B;
-}
+/*.cta-button:hover {color: #fff; border: 1px #2B2B2B solid;}*/
+.cta-button:hover {border: 1px #2B2B2B solid;}
+.cta-button.dark:hover {color: #fff; border-color: #C30001;}
 .cta-button:hover:before {width: 100%;}
 
 
@@ -847,10 +846,10 @@ footer a::after{
 
 footer a:hover::after {
     /*color: blue; */
-    transform: translate(10px);
+    transform: translateY(-10px);    
     /*transform: rotateX(190deg);*/
 }
-
+.social-menu ul{padding-left: 0rem;}
 .social-menu{
     margin-top: 2rem;
 }
@@ -895,7 +894,7 @@ footer a:hover::after {
   text-align: center;
   /*line-height: 80px;*/
   font-size: 35px;
-  margin: 0 10px;
+  margin-right: 10px;
   /*display: block;*/
   display: flex;
   align-items: center;
@@ -1209,6 +1208,20 @@ footer a:hover::after {
     .footer-desktop{display: none;}
     .footer-tablet{display: block;}
     .navbar-nav{margin-left: 10%;}
+    .footer-container ul{list-style: none;}
+    .tablet-footer-nav-menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+    .footer-tablet {
+        height: auto;
+        min-height: 440px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 900px) {
@@ -1226,7 +1239,7 @@ footer a:hover::after {
     .custom-subtitle{font-size: 15px;}
     #WIA-display{font-size: 3.5rem;}
     .art-director-section{background-image: none;}
-    p.card-text{font-size: 12px;}
+    p.card-text{font-size: 15px;}
     
     .custom-text-block{width: 100%;}
     .button-row{text-align: center;}
@@ -1244,6 +1257,39 @@ footer a:hover::after {
         margin: 1.5rem auto 0;
     }
     h5.card-title{font-size: 19px;}
+    .competence-section .skill-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .competence-section .skill-card > .card-header {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .competence-section .skill-card > .card-header img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+    }
+
+    .competence-section .skill-card .card-title {
+        min-height: 2.4em;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .competence-section .skill-card .card-body {
+        padding-top: 0;
+    }
+
+    .competence-section .skill-card .card-text span {
+        display: block;
+    }
     .social-menu ul li a{height: 50px; width: 50px;}
     .card-text span{display: contents;}
     .portfolio-filters {
@@ -1286,7 +1332,7 @@ footer a:hover::after {
         text-align: left;
     }
     .tablet-footer-nav-menu ul {list-style: none;}
-    .tablet-footer-nav-menu li {min-width: 0;}
+    .tablet-footer-nav-menu li {min-width: 0; margin-top: 1rem;}
     .tablet-footer-nav-menu a {margin-bottom: 0;}
     .social-menu ul{padding-left: 0rem;}
     .social-menu{margin-left: 0px;}
@@ -1323,7 +1369,8 @@ footer a:hover::after {
 
 @media (max-width: 767.98px) {
     #art-director-section, #impact-section, #skills-section{padding:0px 20px 0px 20px}
-    .filtros{padding:0px 20px 0px 20px}
+    .filtros{padding:0px 20px 30px 20px}
+    .more-btn::before{content:"→";}
 
     .portfolio-filters {
         /*display: grid;*/
@@ -1356,6 +1403,10 @@ footer a:hover::after {
         text-align: center;
         white-space: normal;
     }
+    .project-card{padding-bottom: 30px;}
+    .swiper-pagination-bullet-active{background: #C30001 !important; width: 15px !important; border-radius: 0px !important;}
+    .swiper-button-next, .swiper-button-prev{top:90% !important; color: #C30001 !important;}
+    .swiper-button-next::after, .swiper-button-prev::after{font-size: 15px !important;}
     .social-menu li{height: 60px !important; width: 60px !important;}
     .social-menu ul li a .icon{font-size: 25px;}
     nav.navbar {height: auto;}
@@ -1373,4 +1424,38 @@ footer a:hover::after {
         align-items: flex-end;
         text-align: right;
     }
+    .footer-mobile .social-menu ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-mobile .social-menu li {
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+
+    .footer-mobile .social-menu li a {
+        display: grid;
+        place-items: center;
+        box-sizing: border-box;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+
+    .footer-mobile .social-menu li a .icon {
+        display: block;
+        margin: 0;
+        line-height: 1;
+    }
+    
 }
