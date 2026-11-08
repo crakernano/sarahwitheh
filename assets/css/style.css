@@ -81,7 +81,7 @@ nav{
     border: 1px #C30001 solid;
     color: #C30001;
     text-transform: uppercase;
-    font-size: 1rem;
+    /*font-size: 1rem;*/
     /*letter-spacing: .15rem;*/
     transition: all .3s;
     position: relative;
@@ -125,6 +125,16 @@ nav{
 .cta-button.dark:hover {color: #fff; border-color: #C30001;}
 .cta-button:hover:before {width: 100%;}
 
+.cta-button.button-red,
+.cta-button.button-red:hover {
+    color: #FFF;
+    background-color: #C30001;
+}
+
+.cta-button.button-red::after,
+.cta-button.button-red::before {
+    background-color: #C30001;
+}
 
 /* FIN BOTON CTA*/
 
@@ -159,10 +169,14 @@ nav{
     margin-right: 25px;
 }
 
-.button-white:hover{
-    background-color: rgba(195, 0, 1, .1)
+.cta-button:hover{
+    background-color: rgba(195, 0, 1, .1);
+    border: 1px #C30001 solid;
 }
 
+.cta-button::after:hover{border: 1px #C30001 solid;}
+
+.button-white:hover
 .button-row { display: block; margin-top: 1rem; }
 
 .navbar-nav{
@@ -846,7 +860,7 @@ footer a::after{
 
 footer a:hover::after {
     /*color: blue; */
-    transform: translateY(-10px);    
+    transform: translate(10px, -10px);    
     /*transform: rotateX(190deg);*/
 }
 .social-menu ul{padding-left: 0rem;}
@@ -1075,6 +1089,15 @@ footer a:hover::after {
     }
     .button-row { display: flex; gap: 0.5rem; justify-content: center; align-items: center; }
     .button-row .custom-button { flex: 1 1 48%; max-width: calc(50% - 0.5rem); white-space: nowrap; }
+    .button-row .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        text-align: center;
+        padding: 15px 16px;
+        margin-right: 0;
+    }
     .custom-button { padding-left: 25px; }
     .button-red{margin-left: 0px !important; margin-right: 10px;}
     .custom-subtitle{font-size: 16px; line-height: 25px;}
@@ -1225,6 +1248,7 @@ footer a:hover::after {
 }
 
 @media (min-width: 768px) and (max-width: 900px) {
+    .more-btn::before{content:"→";}
     #projects-items-wrapper {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
