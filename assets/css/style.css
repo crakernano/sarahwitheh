@@ -136,6 +136,15 @@ nav{
     background-color: #C30001;
 }
 
+.cta-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover .cta-arrow {
+    transform: translate(4px, -4px);
+}
+
 /* FIN BOTON CTA*/
 
 .custom-button{
