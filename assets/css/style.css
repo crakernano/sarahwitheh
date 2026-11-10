@@ -1483,3 +1483,142 @@ footer a:hover::after {
     }
     
 }
+
+.mobile-menu-contact {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    nav.navbar {
+        position: relative;
+        height: auto;
+        margin-top: 0.75rem;
+        margin-bottom: 2rem;
+        padding-bottom: 0 !important;
+        border-bottom: 0;
+        z-index: 10;
+    }
+
+    nav.navbar > .container-fluid {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    nav.navbar .navbar-brand {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    nav.navbar .navbar-toggler {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.35rem 0.55rem;
+        border: 0;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        position: relative;
+        background-image: none;
+    }
+
+    nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #2B2B2B;
+        content: "\00D7";
+        font-size: 28px;
+        line-height: 1;
+        transform: translate(-50%, -55%);
+    }
+
+    #navbarNavAltMarkup {
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 50%;
+        z-index: 20;
+        flex: none;
+        width: calc(100vw - 32px);
+        height: calc(100dvh - 80px);
+        padding: clamp(3rem, 14vw, 4.5rem) clamp(1.5rem, 7vw, 2.5rem);
+        border-radius: 12px;
+        background-color: #F0F0F0;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        overflow-y: auto;
+        transform: translateX(-50%);
+    }
+
+    #navbarNavAltMarkup.show {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #navbarNavAltMarkup .navbar-nav {
+        width: 100%;
+        align-items: flex-start;
+        gap: 0.15rem;
+        margin: 0;
+        text-align: left;
+    }
+
+    #navbarNavAltMarkup .navbar-nav .nav-link {
+        padding: 0;
+        color: #C30001;
+        font-size: clamp(2rem, 8vw, 2.75rem) !important;
+        font-weight: 750 !important;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    #navbarNavAltMarkup .navbar-nav .nav-link::after {
+        display: inline-block;
+        margin-left: 0.2em;
+        content: "\2197";
+        font-size: 0.75em;
+        font-weight: 400;
+    }
+
+    #navbarNavAltMarkup .call-action-section {
+        display: block;
+        width: 100%;
+        margin: auto 0 0;
+        padding-top: 4rem;
+    }
+
+    #navbarNavAltMarkup .mobile-menu-contact {
+        display: block;
+        margin-bottom: 1rem;
+        font-family: "Inter";
+        font-size: 12px;
+    }
+
+    #navbarNavAltMarkup .mobile-menu-contact p {
+        margin: 0 0 0.5rem;
+    }
+
+    #navbarNavAltMarkup .mobile-menu-contact p span {
+        margin-right: 0.5rem;
+        color: #C30001;
+        font-size: 10px;
+    }
+
+    #navbarNavAltMarkup .mobile-menu-email {
+        color: #C30001;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    #navbarNavAltMarkup .cta-button {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 12px 16px;
+        text-align: center;
+        font-size: 12px;
+    }
+}
