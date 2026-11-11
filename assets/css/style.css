@@ -1281,7 +1281,7 @@ footer a:hover::after {
     .habilidades-box{margin-top: 1rem;}
     .response-section-image{display: block;}
     .impact-section{background-image: none;}
-    #impact-block{padding-left: 0px;}
+    #impact-block{padding-left: 1rem;}
     html body div.container nav.navbar.navbar-expand-lg div.container-fluid div#navbarNavAltMarkup.navbar-collapse.collapse.show div.call-action-section button.cta-button{display: none;}
     #responsive-impact-image {
         display: block;
