@@ -1644,4 +1644,7 @@ footer a:hover::after {
         text-align: center;
         font-size: 12px;
     }
+
+    .swiper-pagination{position: inherit !important; margin-top: 20px;}
+    .swiper-button-next::after, .swiper-button-prev::after{margin-top: 70px;}
 }
