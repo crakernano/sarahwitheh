@@ -1286,7 +1286,6 @@ footer a:hover::after {
     .response-section-image{display: block;}
     .impact-section{background-image: none;}
     #impact-block{padding-inline: 1rem;}
-    html body div.container nav.navbar.navbar-expand-lg div.container-fluid div#navbarNavAltMarkup.navbar-collapse.collapse.show div.call-action-section button.cta-button{display: none;}
     #responsive-impact-image {
         display: block;
         width: min(100%, 590px);
@@ -1518,7 +1517,8 @@ footer a:hover::after {
     }
 
     nav.navbar .navbar-brand {
-        font-size: 12px;
+        /*font-size: 12px;*/
+        font-size: 25px;
         letter-spacing: 1px;
     }
 
@@ -1544,25 +1544,32 @@ footer a:hover::after {
         left: 50%;
         color: #2B2B2B;
         content: "\00D7";
-        font-size: 28px;
+        font-size: 36px;
         line-height: 1;
         transform: translate(-50%, -55%);
     }
 
     #navbarNavAltMarkup {
+        --menu-inline-padding: clamp(1.5rem, 7vw, 2.5rem);
         position: absolute;
         top: calc(100% + 0.5rem);
-        left: 50%;
+        left: calc(50% - 50vw);
         z-index: 20;
         flex: none;
-        width: calc(100vw - 32px);
+        width: 100vw;
         height: calc(100dvh - 80px);
-        padding: clamp(3rem, 14vw, 4.5rem) clamp(1.5rem, 7vw, 2.5rem);
-        border-radius: 12px;
+        padding: clamp(3rem, 14vw, 4.5rem) var(--menu-inline-padding);
+        border-radius: 0;
         background-color: #F0F0F0;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        overflow-y: auto;
-        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    #navbarNavAltMarkup.collapsing {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+        transition: height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     #navbarNavAltMarkup.show {
@@ -1628,8 +1635,11 @@ footer a:hover::after {
 
     #navbarNavAltMarkup .cta-button {
         display: block;
-        width: 100%;
+        width: calc(90% + var(--menu-inline-padding) + var(--menu-inline-padding));
         margin: 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         padding: 12px 16px;
         text-align: center;
         font-size: 12px;
