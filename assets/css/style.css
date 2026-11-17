@@ -127,13 +127,17 @@ nav{
 
 .cta-button.button-red,
 .cta-button.button-red:hover {
-    color: #FFF;
-    background-color: #C30001;
+    /*color: #FFF;*/
+    color: #C30001;
+    /*background-color: #C30001;*/
+    background-color: rgba(195, 0, 1, .1);
 }
 
 .cta-button.button-red::after,
 .cta-button.button-red::before {
-    background-color: #C30001;
+    /*background-color: #C30001;*/
+    color: #C30001;
+    background-color: rgba(195, 0, 1, .1);
 }
 
 .cta-arrow {
@@ -1281,7 +1285,7 @@ footer a:hover::after {
     .habilidades-box{margin-top: 1rem;}
     .response-section-image{display: block;}
     .impact-section{background-image: none;}
-    #impact-block{padding-left: 1rem;}
+    #impact-block{padding-inline: 1rem;}
     html body div.container nav.navbar.navbar-expand-lg div.container-fluid div#navbarNavAltMarkup.navbar-collapse.collapse.show div.call-action-section button.cta-button{display: none;}
     #responsive-impact-image {
         display: block;
