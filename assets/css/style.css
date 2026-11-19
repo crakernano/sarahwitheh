@@ -1267,7 +1267,8 @@ footer a:hover::after {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.5rem;
     }
-
+    nav.navbar .navbar-brand {margin-left: -0.75rem;}
+    
     #projects-items-wrapper > .col {
         width: 100% !important;
         max-width: none;
@@ -1279,7 +1280,7 @@ footer a:hover::after {
     p.card-text{font-size: 15px;}
     
     .custom-text-block{width: 100%;}
-    .button-row{text-align: center;}
+    /*.button-row{text-align: center;}*/
     #WIA-display{height: auto; min-height: 50px;}
     #bird-anim{display: none;}
     .habilidades-box{margin-top: 1rem;}
@@ -1518,7 +1519,7 @@ footer a:hover::after {
 
     nav.navbar .navbar-brand {
         /*font-size: 12px;*/
-        font-size: 25px;
+        font-size: 24px;
         letter-spacing: 1px;
     }
 
