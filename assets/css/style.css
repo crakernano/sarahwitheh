@@ -1111,6 +1111,7 @@ footer a:hover::after {
         padding: 15px 16px;
         margin-right: 0;
     }
+    .more-btn:hover::before{content: '↗'; font-family: "Segoe UI Symbol", Arial, sans-serif;}
     .custom-button { padding-left: 25px; }
     .button-red{margin-left: 0px !important; margin-right: 10px;}
     .custom-subtitle{font-size: 16px; line-height: 25px;}
