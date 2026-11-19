@@ -1414,7 +1414,7 @@ footer a:hover::after {
     .more-btn::before,
     .more-btn:hover::before,
     .more-btn.smooth-exit::before {
-        content: "\2197" !important;
+        content: "↗";
         font-family: Arial, sans-serif !important;
     }
 
