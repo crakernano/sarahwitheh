@@ -1411,7 +1411,12 @@ footer a:hover::after {
 @media (max-width: 767.98px) {
     #art-director-section, #impact-section, #skills-section{padding:0px 20px 0px 20px}
     .filtros{padding:0px 20px 30px 20px}
-    .more-btn::before{content:"→";}
+    .more-btn::before,
+    .more-btn:hover::before,
+    .more-btn.smooth-exit::before {
+        content: "\2197" !important;
+        font-family: Arial, sans-serif !important;
+    }
 
     .portfolio-filters {
         /*display: grid;*/
