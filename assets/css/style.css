@@ -211,7 +211,8 @@ nav{
 .custom-subtitle{
     font-family: 'Inter';
     font-weight: 600;
-    font-size: 20px;
+    /*font-size: 20px;*/
+    font-size: 14px;
     line-height: 62px;
     letter-spacing: 28%;
     text-transform: uppercase;
@@ -223,7 +224,8 @@ nav{
     font-family: 'Inter';
     color: #C30001;
     font-weight: 900;
-    font-size: 100px;
+    /*font-size: 100px;*/
+    font-size: 4rem;
     line-height: 102px;
     letter-spacing: -2%;
 }
